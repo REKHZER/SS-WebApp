@@ -1,0 +1,72 @@
+<div class="page-container">
+    <h1>Présences</h1>
+
+    @if(attendanceInfos$ | async; as attendanceInfos) {
+    <table
+        class="table"
+        cdk-table
+        matSort
+        [dataSource]="attendanceInfos"
+        (matSortChange)="sortChange(attendanceInfos, $event)"
+    >
+        <!-- Name -->
+        <ng-container cdkColumnDef="userName">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Name</th>
+            <td cdk-cell *cdkCellDef="let element">{{ element.userName }}</td>
+        </ng-container>
+
+        <!-- Events -->
+        <ng-container cdkColumnDef="eventCount">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Events</th>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.eventCount }}
+            </td>
+        </ng-container>
+
+        <!-- Bench -->
+        <ng-container cdkColumnDef="benchPercentage">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Bench</th>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.benchPercentage }} %
+            </td>
+        </ng-container>
+
+        <!-- Absence -->
+        <ng-container cdkColumnDef="absencePercentage">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Absence</th>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.absencePercentage }} %
+            </td>
+        </ng-container>
+
+        <!-- presencePercentage -->
+        <ng-container cdkColumnDef="presencePercentage">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Présence</th>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.presencePercentage }} %
+            </td>
+        </ng-container>
+
+        <!-- ghostingPercentage -->
+        <ng-container cdkColumnDef="ghostingPercentage">
+            <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Ghosting</th>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.ghostingPercentage }} %
+            </td>
+        </ng-container>
+
+        <tr
+            cdk-header-row
+            *cdkHeaderRowDef="displayedColumns; sticky: true"
+        ></tr>
+        <tr
+            cdk-row
+            *cdkRowDef="let row; columns: displayedColumns; let element"
+        >
+            {{
+                row
+            }}
+        </tr>
+    </table>
+    }
+</div>

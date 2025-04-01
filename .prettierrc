@@ -1,0 +1,27 @@
+{
+    "singleQuote": true,
+    "useTabs": false,
+    "endOfLine": "auto",
+    "arrowParens": "avoid",
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "printWidth": 80,
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": { "parser": "json" }
+        },
+        {
+            "files": "*.html",
+            "options": { "parser": "angular" }
+        },
+        {
+            "files": "*.scss",
+            "options": { "parser": "scss" }
+        },
+        {
+            "files": ["*.ts", "*.js"],
+            "options": { "parser": "typescript" }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+$main-color: #d9e5df;
+
+.sitemap-container {
+    width: 250px;
+    height: 100%;
+    padding: 0 20px;
+    background-color: $main-color;
+    position: fixed;
+
+    .logo {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .sitemap-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        a.sitemap-nav-item {
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+    }
+}

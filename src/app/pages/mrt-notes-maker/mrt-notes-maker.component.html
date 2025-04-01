@@ -1,0 +1,84 @@
+<div class="page-container">
+    <h1>MRT Notes Maker</h1>
+
+    @for(boss of DragonSoul; track boss.name) {
+    <div>
+        <h2>{{ boss.name }}</h2>
+        <button mat-button (click)="fillAuto(boss)">Remplissage AUTO</button>
+
+        <table cdk-table [dataSource]="boss.spells">
+            <!-- Checkbox -->
+            <ng-container cdkColumnDef="checkbox">
+                <th cdk-header-cell *cdkHeaderCellDef></th>
+                <td cdk-cell *cdkCellDef="let element">
+                    <input
+                        [ngModel]="element.isChecked"
+                        (ngModelChange)="element.isChecked = $event"
+                        type="checkbox"
+                    />
+                </td>
+            </ng-container>
+
+            <!-- Icon -->
+            <ng-container cdkColumnDef="icon">
+                <th cdk-header-cell *cdkHeaderCellDef>Ico.</th>
+                <td cdk-cell *cdkCellDef="let element">
+                    <img
+                        *ngIf="element.iconUrl as src"
+                        [src]="src"
+                        height="25"
+                    />
+                </td>
+            </ng-container>
+
+            <!-- Timer -->
+            <ng-container cdkColumnDef="timer">
+                <th cdk-header-cell *cdkHeaderCellDef>Timer</th>
+                <td cdk-cell *cdkCellDef="let element">{{ element.timer }}</td>
+            </ng-container>
+
+            <!-- Name -->
+            <ng-container cdkColumnDef="name">
+                <th cdk-header-cell *cdkHeaderCellDef>Name</th>
+                <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+            </ng-container>
+
+            <!-- Attribs -->
+            <ng-container cdkColumnDef="attribs">
+                <th cdk-header-cell *cdkHeaderCellDef>Attribs</th>
+                <td cdk-cell *cdkCellDef="let element">
+                    @if(element.attribs.length) { @for (attrib of
+                    element.attribs; track attrib.player.name;) {
+                    <mat-chip
+                        [matTooltip]="
+                            attrib.cd.name + ' : ' + attrib.cd.cooldown
+                        "
+                    >
+                        <img
+                            matChipAvatar
+                            *ngIf="attrib.cd.iconUrl as src"
+                            [src]="src"
+                            height="25"
+                        />
+
+                        {{ attrib.player.name }}
+                    </mat-chip>
+                    } } @else { -- }
+                </td>
+            </ng-container>
+
+            <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+            <tr
+                cdk-row
+                *cdkRowDef="let row; columns: displayedColumns; let element"
+            >
+                {{
+                    row
+                }}
+            </tr>
+        </table>
+    </div>
+
+    <button mat-button (click)="exportNote(boss)">Exporter la note</button>
+    }
+</div>

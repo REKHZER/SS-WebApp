@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+@import "./scss/components/buttons";
+
+$main-color: #d9e5df;
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.page-container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}

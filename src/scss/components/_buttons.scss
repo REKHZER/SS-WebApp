@@ -1,0 +1,24 @@
+$main-color: #5a7568;
+
+.button {
+    background-color: $main-color;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: black;
+
+    &.mod-outlined {
+        background-color: unset;
+        color: rgb(41, 40, 40);
+
+        &:hover {
+            color: white;
+            background-color: $main-color;
+        }
+    }
+
+    &.active {
+        background-color: $main-color;
+        color: white;
+    }
+}

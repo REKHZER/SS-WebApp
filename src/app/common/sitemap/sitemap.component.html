@@ -1,0 +1,31 @@
+<div class="sitemap-container">
+    <div class="logo">
+        <img src="images/mop.png" height="50px" />
+    </div>
+    <div class="sitemap-nav">
+        <a
+            class="button mod-outlined sitemap-nav-item"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >
+            Accueil
+        </a>
+        <a
+            class="button mod-outlined sitemap-nav-item"
+            [routerLink]="['/mrt']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >
+            MRT Notes
+        </a>
+        <a
+            class="button mod-outlined sitemap-nav-item"
+            [routerLink]="['/attendance']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >
+            Présences
+        </a>
+    </div>
+</div>
