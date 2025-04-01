@@ -1,6 +1,5 @@
-import { HOST_TAG_NAME } from '@angular/core';
-
-export interface RaidDrop {
+export interface RaidHelperRaidDrop {
+    eventId: string;
     class: string;
     class_emote: string;
     color: string;
@@ -15,7 +14,15 @@ export interface RaidDrop {
     userid: string;
 }
 
-interface Event {
+export interface GetEventsResponse {
+    currentPage: number;
+    eventsOverall: number;
+    eventsTransmitted: number;
+    pages: number;
+    postedEvents: RaidHelperEvent[];
+}
+
+export interface RaidHelperEvent {
     id: string;
     serverId: string;
     leaderId: string;
@@ -46,6 +53,14 @@ interface SignUp {
     entryTime: number;
     name: string;
     userId: string;
+    className: EClassName;
 }
 
 export const AbsenceClassEmoteId = '612343589070045200';
+
+export enum EClassName {
+    Absence = 'Absence',
+    Tentative = 'Tentative',
+    Bench = 'Bench',
+    Late = 'Late',
+}

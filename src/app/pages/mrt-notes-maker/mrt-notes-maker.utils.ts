@@ -5,7 +5,7 @@ import {
     EPlayerSpec,
 } from '../../common/models/player-classes.models';
 import { MRTPlayer } from '../../common/models/players.models';
-import { RaidDrop } from '../../common/models/raid-helper.models';
+import { RaidHelperRaidDrop } from '../../common/models/raid-helper.models';
 import { getPlayerNameFromDiscordId } from '../../common/utils/player-names.utils';
 
 // SAA: SPELL_AURA_APPLIED,
@@ -35,7 +35,9 @@ export const bossNoteToMRTNote = (boss: Boss) => {
     console.log(note);
 };
 
-export const raidDropToRoster = (raidDrop: RaidDrop[]): MRTPlayer[] => {
+export const raidDropToRoster = (
+    raidDrop: RaidHelperRaidDrop[],
+): MRTPlayer[] => {
     return raidDrop.reduce<MRTPlayer[]>((acc, curr) => {
         const classFromSpec = getClassFromSpecId(curr.spec_emote);
         const spec = getSpecFromId(curr.spec_emote);

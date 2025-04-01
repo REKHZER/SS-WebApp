@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { RaidDrop } from '../common/models/raid-helper.models';
+import { RaidHelperRaidDrop } from '../common/models/raid-helper.models';
 import { AttendanceInfo } from '../common/models/attendance.models';
 import { Params } from '@angular/router';
 import { ISODate, ISOTime } from '../common/models/date.models';
@@ -16,7 +16,7 @@ export class StupidSquadService {
         page: number = 0,
         channelFilter: string[] = ['1316074810559959090'],
         includeSignUps: boolean = true,
-        startTimeFilter: ISODate = '2025-03-20',
+        startTimeFilter: ISODate = '2025-03-29',
     ) => {
         const params: Params = {
             page,
