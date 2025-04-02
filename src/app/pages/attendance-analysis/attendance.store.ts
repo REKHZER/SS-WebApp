@@ -3,13 +3,16 @@ import { Sort } from '@angular/material/sort';
 import { ComponentStore } from '@ngrx/component-store';
 import {
     catchError,
+    concatMap,
     delay,
     EMPTY,
     forkJoin,
+    from,
     map,
     Observable,
     switchMap,
     tap,
+    toArray,
 } from 'rxjs';
 import { AttendanceInfo } from '../../common/models/attendance.models';
 import { RaidHelperEvent } from '../../common/models/raid-helper.models';
@@ -39,7 +42,7 @@ export class AttendanceStore extends ComponentStore<AttendanceStoreState> {
         }),
     );
 
-    getEventsEffect = this.effect((obs$: Observable<void>) =>
+    getAttendanceInfosEffect = this.effect((obs$: Observable<void>) =>
         obs$.pipe(
             switchMap(() =>
                 this.raidHelperService.getEvents().pipe(
@@ -52,20 +55,13 @@ export class AttendanceStore extends ComponentStore<AttendanceStoreState> {
                         },
                     }),
                     catchError(() => EMPTY),
-                ),
-            ),
-        ),
-    );
-
-    getAttendanceInfosFrontEffect = this.effect((obs$: Observable<void>) =>
-        obs$.pipe(
-            switchMap(() =>
-                this.raidHelperService.getEvents().pipe(
-                    switchMap(events => {
-                        const obs = events.map(event =>
-                            this.raidHelperService.getRaidplan(event.id),
-                        );
-                        return forkJoin(obs).pipe(
+                    switchMap(events =>
+                        from(events).pipe(
+                            // Émettre chaque événement un par un
+                            concatMap(event =>
+                                this.raidHelperService.getRaidplan(event.id),
+                            ),
+                            toArray(), // Convertir la séquence en un tableau une fois terminé
                             switchMap(data =>
                                 this.attendanceService
                                     .getAttendance(events, data)
@@ -76,7 +72,7 @@ export class AttendanceStore extends ComponentStore<AttendanceStoreState> {
                                                     sortAttendanceInfosByName(
                                                         attendanceInfos,
                                                     );
-                                                return this.attendanceInfosUpdater(
+                                                this.attendanceInfosUpdater(
                                                     sorted,
                                                 );
                                             },
@@ -84,8 +80,8 @@ export class AttendanceStore extends ComponentStore<AttendanceStoreState> {
                                         catchError(() => EMPTY),
                                     ),
                             ),
-                        );
-                    }),
+                        ),
+                    ),
                 ),
             ),
         ),

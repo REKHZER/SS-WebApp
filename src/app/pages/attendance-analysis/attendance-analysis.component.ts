@@ -30,8 +30,7 @@ export class AttendanceAnalysisComponent {
     ];
 
     async ngOnInit() {
-        this.attendanceStore.getEventsEffect();
-        this.attendanceStore.getAttendanceInfosFrontEffect();
+        this.attendanceStore.getAttendanceInfosEffect();
     }
 
     sortChange(attendanceInfos: AttendanceInfo[], sort: Sort) {
