@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { RouterOutlet } from '@angular/router';
-import { SitemapComponent } from './common/sitemap/sitemap.component';
-import { AppUpdateService } from './services/app-update.service';
 import { SwUpdate, VersionEvent } from '@angular/service-worker';
 import { filter } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
+import { SitemapComponent } from './common/sitemap/sitemap.component';
 import { UpdateDialogComponent } from './common/update-dialog/update-dialog.component';
 
 @Component({
@@ -18,16 +17,24 @@ export class AppComponent {
     readonly dialog = inject(MatDialog);
 
     constructor(private readonly updates: SwUpdate) {
-        this.updates.versionUpdates.subscribe(() => {
-            this.showAppUpdateAlert();
-        });
+        this.updates.versionUpdates
+            .pipe(
+                filter(
+                    ($event: VersionEvent) => $event.type === 'VERSION_READY',
+                ),
+            )
+            .subscribe(() => {
+                this.showAppUpdateAlert();
+            });
     }
 
     showAppUpdateAlert() {
         const dialogRef = this.dialog.open(UpdateDialogComponent);
 
         dialogRef.afterClosed().subscribe(data => {
-            this.doAppUpdate();
+            if (data) {
+                this.doAppUpdate();
+            }
         });
     }
     doAppUpdate() {
