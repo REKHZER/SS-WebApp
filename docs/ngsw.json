@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1743595017950,
+  "timestamp": 1743595462509,
   "index": "/SS-WebApp/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/SS-WebApp/favicon.ico",
         "/SS-WebApp/index.html",
-        "/SS-WebApp/main-5PT4FRO4.js",
+        "/SS-WebApp/main-KZIFMZOY.js",
         "/SS-WebApp/manifest.webmanifest",
         "/SS-WebApp/polyfills-EQXJKH7W.js",
         "/SS-WebApp/styles-NWITZWFM.css"
@@ -53,8 +53,8 @@
     "/SS-WebApp/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/SS-WebApp/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
     "/SS-WebApp/images/mop.png": "0dc9cf0a94bfb52611dc1da00ffdfdb31576cf5c",
-    "/SS-WebApp/index.html": "466f373b0db5f9e9509280327ad2c6db6a4d86ac",
-    "/SS-WebApp/main-5PT4FRO4.js": "07586de0db2f810a15fe286160f02b3125470216",
+    "/SS-WebApp/index.html": "e4d9293f66dde183d67238cb195d5d1aa549d7a1",
+    "/SS-WebApp/main-KZIFMZOY.js": "0d1c9dfe03368ceb63df6511454f7ed79e858988",
     "/SS-WebApp/manifest.webmanifest": "312c251d003939df29c1d32a2891c002dcf1db71",
     "/SS-WebApp/polyfills-EQXJKH7W.js": "d8301403135d2a2a157cb2e2394c22f3fc0b5801",
     "/SS-WebApp/styles-NWITZWFM.css": "c06b936a30902042e222c3e932c11e2cd3e17368"
