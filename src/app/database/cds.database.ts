@@ -1,5 +1,5 @@
-import { Cooldown, ECooldownType } from '../models/cds.models';
-import { EPlayerSpec } from '../models/player-classes.models';
+import { Cooldown, ECooldownType } from '../common/models/cds.models';
+import { EPlayerSpec } from '../common/models/player-classes.models';
 
 export const ALL_CDS: Cooldown[] = [
     {

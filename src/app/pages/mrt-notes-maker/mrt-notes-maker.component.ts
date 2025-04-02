@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
-import { DragonSoul } from '../../common/database/bosses.database';
 import { Boss, BossSpell } from '../../common/models/bosses.models';
 import { MRTPlayer } from '../../common/models/players.models';
 import {
@@ -16,6 +15,7 @@ import { bossNoteToMRTNote, raidDropToRoster } from './mrt-notes-maker.utils';
 import { CooldownAttrib } from '../../common/models/cds.models';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { DragonSoul } from '../../database/bosses.database';
 
 @Component({
     selector: 'app-mrt-notes-makers',

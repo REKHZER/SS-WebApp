@@ -1,4 +1,4 @@
-import { ALL_CDS } from '../database/cds.database';
+import { ALL_CDS } from '../../database/cds.database';
 import { Boss } from '../models/bosses.models';
 import {
     ECooldownType,

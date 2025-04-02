@@ -1,4 +1,4 @@
-import { PLAYERS } from '../database/players.database';
+import { PLAYERS } from '../../database/players.database';
 
 export const getPlayerNameFromDiscordId = (
     discordId: string,

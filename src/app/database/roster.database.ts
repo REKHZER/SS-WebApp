@@ -1,5 +1,8 @@
-import { EPlayerClass, EPlayerSpec } from '../models/player-classes.models';
-import { MRTPlayer } from '../models/players.models';
+import {
+    EPlayerClass,
+    EPlayerSpec,
+} from '../common/models/player-classes.models';
+import { MRTPlayer } from '../common/models/players.models';
 
 export const ROSTER: MRTPlayer[] = [
     {

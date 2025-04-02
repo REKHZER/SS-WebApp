@@ -1,5 +1,5 @@
-import { Boss } from '../models/bosses.models';
-import { ECooldownType } from '../models/cds.models';
+import { Boss } from '../common/models/bosses.models';
+import { ECooldownType } from '../common/models/cds.models';
 
 export const Morshok: Boss = {
     name: 'Morshok',

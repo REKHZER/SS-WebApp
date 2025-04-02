@@ -3,6 +3,7 @@ import { Sort } from '@angular/material/sort';
 import { ComponentStore } from '@ngrx/component-store';
 import {
     catchError,
+    delay,
     EMPTY,
     forkJoin,
     map,

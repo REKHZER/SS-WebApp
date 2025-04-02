@@ -11,9 +11,11 @@ import {
     withInterceptorsFromDi,
 } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
+import { AppUpdateService } from './services/app-update.service';
 
 export const appConfig: ApplicationConfig = {
     providers: [
+        AppUpdateService,
         provideZoneChangeDetection({ eventCoalescing: true }),
         provideRouter(routes),
         provideServiceWorker('ngsw-worker.js', {

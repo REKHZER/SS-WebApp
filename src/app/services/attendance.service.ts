@@ -1,5 +1,4 @@
 import { inject, Injectable } from '@angular/core';
-import { PLAYERS } from '../common/database/players.database';
 import {
     AttendanceData,
     AttendanceInfo,
@@ -11,6 +10,7 @@ import {
 } from '../common/models/raid-helper.models';
 import { RaidHelperService } from './raid-helper.service';
 import { Observable, of } from 'rxjs';
+import { PLAYERS } from '../database/players.database';
 
 @Injectable({ providedIn: 'root' })
 export class AttendanceService {

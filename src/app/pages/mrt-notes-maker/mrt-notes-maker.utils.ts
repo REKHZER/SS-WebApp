@@ -1,4 +1,3 @@
-import { ALL_CLASSES_WITH_SPECS } from '../../common/database/player-classes.database';
 import { Boss } from '../../common/models/bosses.models';
 import {
     EPlayerClass,
@@ -7,6 +6,7 @@ import {
 import { MRTPlayer } from '../../common/models/players.models';
 import { RaidHelperRaidDrop } from '../../common/models/raid-helper.models';
 import { getPlayerNameFromDiscordId } from '../../common/utils/player-names.utils';
+import { ALL_CLASSES_WITH_SPECS } from '../../database/player-classes.database';
 
 // SAA: SPELL_AURA_APPLIED,
 // SAR: SPELL_AURA_REMOVED,

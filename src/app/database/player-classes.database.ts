@@ -2,7 +2,7 @@ import {
     EPlayerClass,
     EPlayerSpec,
     PlayerClass,
-} from '../models/player-classes.models';
+} from '../common/models/player-classes.models';
 
 export const ALL_CLASSES_WITH_SPECS: PlayerClass[] = [
     {

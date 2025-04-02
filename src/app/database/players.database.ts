@@ -1,4 +1,4 @@
-import { Player } from '../models/players.models';
+import { Player } from '../common/models/players.models';
 
 export const PLAYERS: Player[] = [
     { discordId: '779804249672384554', name: 'Aki', arrivalDate: '01-04-2025' },
