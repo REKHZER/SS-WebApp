@@ -35,7 +35,7 @@ export class RaidHelperService {
                             'tgrUQdfcYv6UfjFnnO4mZzGN8cVvQi5YzNH0GRlq',
                         IncludeSignUps: 'true',
                         ChannelFilter: '1316074810559959090',
-                        StartTimeFilter: '1743206400', // 29-03-2025
+                        StartTimeFilter: '1743870277', // 05-04-2025
                     },
                 },
             )
