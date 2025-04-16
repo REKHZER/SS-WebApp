@@ -13,12 +13,19 @@ export class RaidHelperService {
 
     getRaidplan = (
         eventId: string,
-    ): Observable<{ eventId: string; raidDrops: RaidHelperRaidDrop[] }> =>
+    ): Observable<{
+        eventId: string;
+        raidDrops: RaidHelperRaidDrop[];
+    } | null> =>
         this.httpClient
             .get<{ hash: string; raidDrop: RaidHelperRaidDrop[] }>(
                 `https://raid-helper.dev/api/raidplan/${eventId}`,
             )
-            .pipe(map(data => ({ eventId, raidDrops: data.raidDrop })));
+            .pipe(
+                map(data =>
+                    data ? { eventId, raidDrops: data.raidDrop } : null,
+                ),
+            );
 
     getEvent = (eventId: string) =>
         this.httpClient.get<RaidHelperEvent>(

@@ -49,7 +49,7 @@ export class MrtNotesMakerComponent {
 
     async ngOnInit() {
         const raidDrop = await this.raidPlan$.toPromise();
-        if (raidDrop !== undefined) {
+        if (raidDrop !== undefined && raidDrop !== null) {
             this.players = raidDropToRoster(raidDrop.raidDrops);
         }
     }

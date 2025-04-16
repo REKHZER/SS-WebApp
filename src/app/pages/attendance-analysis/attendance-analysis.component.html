@@ -27,7 +27,7 @@
         <ng-container cdkColumnDef="benchPercentage">
             <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Bench</th>
             <td cdk-cell *cdkCellDef="let element">
-                {{ element.benchPercentage }} %
+                {{ element.benchPercentage | number : '1.0-0' }} %
             </td>
         </ng-container>
 
@@ -35,7 +35,7 @@
         <ng-container cdkColumnDef="absencePercentage">
             <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Absence</th>
             <td cdk-cell *cdkCellDef="let element">
-                {{ element.absencePercentage }} %
+                {{ element.absencePercentage | number : '1.0-0' }} %
             </td>
         </ng-container>
 
@@ -43,7 +43,7 @@
         <ng-container cdkColumnDef="presencePercentage">
             <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Présence</th>
             <td cdk-cell *cdkCellDef="let element">
-                {{ element.presencePercentage }} %
+                {{ element.presencePercentage | number : '1.0-0' }} %
             </td>
         </ng-container>
 
@@ -51,7 +51,7 @@
         <ng-container cdkColumnDef="ghostingPercentage">
             <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Ghosting</th>
             <td cdk-cell *cdkCellDef="let element">
-                {{ element.ghostingPercentage }} %
+                {{ element.ghostingPercentage | number : '1.0-0' }} %
             </td>
         </ng-container>
 

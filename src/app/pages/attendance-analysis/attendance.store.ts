@@ -6,6 +6,7 @@ import {
     concatMap,
     delay,
     EMPTY,
+    filter,
     forkJoin,
     from,
     map,
@@ -61,6 +62,7 @@ export class AttendanceStore extends ComponentStore<AttendanceStoreState> {
                             concatMap(event =>
                                 this.raidHelperService.getRaidplan(event.id),
                             ),
+                            filter(x => x !== null),
                             toArray(), // Convertir la séquence en un tableau une fois terminé
                             switchMap(data =>
                                 this.attendanceService
