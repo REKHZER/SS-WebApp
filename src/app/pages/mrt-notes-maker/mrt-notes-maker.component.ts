@@ -96,36 +96,14 @@ export class MrtNotesMakerComponent {
         for (const exceptedCombinaison of orderedCombinaisons) {
             let newAttribs: CooldownAttrib[] = [];
 
-            if (exceptedCombinaison.cdId) {
-                const cd = availableCds.find(
-                    x => x.cd.spellId === exceptedCombinaison.cdId,
-                );
-
-                if (cd) {
-                    newAttribs = [
-                        ...newAttribs,
-                        {
-                            player: cd.player,
-                            cd: cd.cd,
-                            timer: bossSpell.timer,
-                        },
-                    ];
-                }
-            } else if (exceptedCombinaison.expectedCooldowns) {
+            if (exceptedCombinaison.expectedCooldowns) {
                 for (const item of exceptedCombinaison.expectedCooldowns) {
-                    const filteredCds = getFilterCdsWithType(
-                        availableCds,
-                        item.cdType,
-                    );
+                    if (item.cdId) {
+                        const cd = availableCds.find(
+                            x => x.cd.spellId === item.cdId,
+                        );
 
-                    if (!filteredCds.length) {
-                        continue;
-                    }
-
-                    for (let index = 0; index < item.count; index++) {
-                        const cd = filteredCds[index];
-
-                        if (cd !== undefined) {
+                        if (cd) {
                             newAttribs = [
                                 ...newAttribs,
                                 {
@@ -134,6 +112,30 @@ export class MrtNotesMakerComponent {
                                     timer: bossSpell.timer,
                                 },
                             ];
+                        }
+                    } else if (item.cdType) {
+                        const filteredCds = getFilterCdsWithType(
+                            availableCds,
+                            item.cdType,
+                        );
+
+                        if (!filteredCds.length) {
+                            continue;
+                        }
+
+                        for (let index = 0; index < item.count; index++) {
+                            const cd = filteredCds[index];
+
+                            if (cd !== undefined) {
+                                newAttribs = [
+                                    ...newAttribs,
+                                    {
+                                        player: cd.player,
+                                        cd: cd.cd,
+                                        timer: bossSpell.timer,
+                                    },
+                                ];
+                            }
                         }
                     }
                 }

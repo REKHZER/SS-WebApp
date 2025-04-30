@@ -15,7 +15,7 @@ export const ALL_CDS: Cooldown[] = [
             'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_smoke.jpg',
         ),
         types: [ECooldownType.reducMagic, ECooldownType.reducPhysic],
-        priority: 1,
+        priority: 3,
     },
     {
         name: 'Divine Guardian',
@@ -158,7 +158,7 @@ export const ALL_CDS: Cooldown[] = [
             'https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordbarrier.jpg',
         ),
         types: [ECooldownType.reducMagic, ECooldownType.reducPhysic],
-        priority: 1,
+        priority: 2,
     },
     {
         name: 'Divine Hymn',
@@ -169,7 +169,7 @@ export const ALL_CDS: Cooldown[] = [
             'https://wow.zamimg.com/images/wow/icons/large/spell_holy_divinehymn.jpg',
         ),
         types: [ECooldownType.healing],
-        priority: 1,
+        priority: 2,
     },
     {
         name: 'Hymn of Hope',
@@ -180,7 +180,7 @@ export const ALL_CDS: Cooldown[] = [
             'https://wow.zamimg.com/images/wow/icons/large/spell_holy_symbolofhope.jpg',
         ),
         types: [ECooldownType.manaRegen],
-        priority: 1,
+        priority: 2,
     },
     {
         name: 'Pain Suppression',
@@ -205,8 +205,23 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/ability_toughness.jpg',
         ),
-        types: [ECooldownType.targetedDamageReduc],
+        types: [ECooldownType.increasePoolHp],
         priority: 1,
+    },
+    {
+        name: 'Demoralizing Banner',
+        specs: [
+            EPlayerSpec.WarArms,
+            EPlayerSpec.WarFury,
+            EPlayerSpec.WarProtection,
+        ],
+        cooldown: '00:03:00',
+        spellId: 114203,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/demoralizing_banner.jpg',
+        ),
+        types: [ECooldownType.reducPhysic, ECooldownType.reducMagic],
+        priority: 10,
     },
     {
         name: 'Anti-Magic Zone',
@@ -218,6 +233,50 @@ export const ALL_CDS: Cooldown[] = [
         ),
         types: [ECooldownType.reducMagic],
         priority: 1,
+    },
+    {
+        name: 'Healing Tide Totem',
+        specs: [EPlayerSpec.ShamanRestoration],
+        cooldown: '00:03:00',
+        spellId: 108280,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_healingtide.jpg',
+        ),
+        types: [ECooldownType.healing],
+        priority: 1,
+    },
+    {
+        name: 'Healing Tide Totem',
+        specs: [EPlayerSpec.ShamanElemental, EPlayerSpec.ShamanEnhancement],
+        cooldown: '00:03:00',
+        spellId: 108280,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_healingtide.jpg',
+        ),
+        types: [ECooldownType.healing],
+        priority: 10,
+    },
+    {
+        name: 'Ancestral Guidance',
+        specs: [EPlayerSpec.ShamanRestoration],
+        cooldown: '00:02:00',
+        spellId: 108281,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_ancestralguidance.jpg',
+        ),
+        types: [ECooldownType.healing],
+        priority: 1,
+    },
+    {
+        name: 'Ancestral Guidance',
+        specs: [EPlayerSpec.ShamanElemental, EPlayerSpec.ShamanEnhancement],
+        cooldown: '00:02:00',
+        spellId: 108281,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_ancestralguidance.jpg',
+        ),
+        types: [ECooldownType.healing],
+        priority: 10,
     },
 ];
 

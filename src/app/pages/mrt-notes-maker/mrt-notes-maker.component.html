@@ -96,7 +96,11 @@
                                 <th cdk-header-cell *cdkHeaderCellDef>
                                     Attribs
                                 </th>
-                                <td cdk-cell *cdkCellDef="let element">
+                                <td
+                                    cdk-cell
+                                    *cdkCellDef="let element"
+                                    class="d-flex gap-2"
+                                >
                                     @if(element.attribs.length) { @for (attrib
                                     of element.attribs; track
                                     attrib.player.name;) {
@@ -148,9 +152,9 @@
                             mat-icon-button
                             [cdkCopyToClipboard]="boss.note"
                         >
-                            <mat-icon matTooltip="Copier la note"
-                                >content_copy</mat-icon
-                            >
+                            <mat-icon matTooltip="Copier la note">
+                                content_copy
+                            </mat-icon>
                         </button>
                     </div>
                     <div

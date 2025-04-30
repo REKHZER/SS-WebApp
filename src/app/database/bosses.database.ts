@@ -7,8 +7,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 1',
-            spellId: 103414,
-            occurance: 1,
             timer: '00:00:16',
             attribs: [],
             exceptedCds: [
@@ -40,8 +38,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 2',
-            spellId: 103414,
-            occurance: 2,
             timer: '00:00:29',
             attribs: [],
             exceptedCds: [
@@ -60,8 +56,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 4',
-            spellId: 103414,
-            occurance: 4,
             timer: '00:00:43',
             attribs: [],
             exceptedCds: [
@@ -80,8 +74,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 6',
-            spellId: 103414,
-            occurance: 6,
             timer: '00:01:42',
             attribs: [],
             exceptedCds: [
@@ -100,8 +92,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 8',
-            spellId: 103414,
-            occurance: 8,
             timer: '00:01:56',
             attribs: [],
             exceptedCds: [
@@ -120,8 +110,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 10',
-            spellId: 103414,
-            occurance: 10,
             timer: '00:02:09',
             attribs: [],
             exceptedCds: [
@@ -140,8 +128,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 12 - Everyone Personals',
-            spellId: 103414,
-            occurance: 12,
             timer: '00:02:24',
             attribs: [],
             exceptedCds: [],
@@ -153,8 +139,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 14',
-            spellId: 103414,
-            occurance: 14,
             timer: '00:03:22',
             attribs: [],
             exceptedCds: [
@@ -173,8 +157,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 16',
-            spellId: 103414,
-            occurance: 16,
             timer: '00:03:36',
             attribs: [],
             exceptedCds: [
@@ -193,8 +175,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 18',
-            spellId: 103414,
-            occurance: 18,
             timer: '00:03:51',
             attribs: [],
             exceptedCds: [
@@ -213,8 +193,6 @@ export const Morshok: Boss = {
         {
             isChecked: true,
             name: 'Stomp 20',
-            spellId: 103414,
-            occurance: 20,
             timer: '00:04:07',
             attribs: [],
             exceptedCds: [
@@ -239,14 +217,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 1',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:00:00', // TODO
+            timer: '00:00:00',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:00:03,SCS:122713:1}{spell:122713} F&V 1 - [ATTRIBS] \n`,
@@ -254,14 +235,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 2',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:00:00', // TODO
+            timer: '00:00:00',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:00:03,SCS:122713:2}{spell:122713} F&V 2 - [ATTRIBS] \n`,
@@ -269,14 +253,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 3',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:00:00', // TODO
+            timer: '00:00:00',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:00:03,SCS:122713:3}{spell:122713} F&V 3 - [ATTRIBS] \n`,
@@ -284,14 +271,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 4',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:00:00', // TODO
+            timer: '00:00:00',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:00:03,SCS:122713:4}{spell:122713} F&V 4 - [ATTRIBS] \n`,
@@ -299,9 +289,7 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'Phase 2',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:05:00', // TODO
+            timer: '00:05:00',
             attribs: [],
             exceptedCds: [],
             noteTemplate: `{time:00:01,SCC:123833:1}|cffFFA500 Phase 2 |r \n`,
@@ -309,14 +297,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 1',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:05:42', // TODO
+            timer: '00:05:42',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:00:42,SCC:123833:1}{spell:122713} F&V 1 - [ATTRIBS] \n`,
@@ -324,14 +315,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 2',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:06:31', // TODO
+            timer: '00:06:31',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:01:31,SCC:123833:1}{spell:122713} F&V 2 - [ATTRIBS] \n`,
@@ -339,14 +333,17 @@ export const Zorlok: Boss = {
         {
             isChecked: true,
             name: 'F&V 3',
-            spellId: 0, // TODO
-            occurance: 1, // TODO
-            timer: '00:07:18', // TODO
+            timer: '00:07:18',
             attribs: [],
             exceptedCds: [
                 {
-                    cdId: 16190, // SLT
                     priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.reducPhysic, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.increasePoolHp, count: 1 },
+                        { cdId: 114203, count: 1 }, // Banner war
+                    ],
                 },
             ],
             noteTemplate: `{time:02:18,SCC:123833:1}{spell:122713} F&V 3 - [ATTRIBS] \n`,

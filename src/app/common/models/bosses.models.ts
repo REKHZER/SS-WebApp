@@ -10,8 +10,6 @@ export interface Boss {
 export interface BossSpell {
     isChecked: boolean;
     name: string;
-    spellId: number;
-    occurance: number;
     timer: ISOTime;
     exceptedCds: ExpectedCooldownCombinaison[];
     attribs: CooldownAttrib[];
@@ -20,12 +18,12 @@ export interface BossSpell {
 }
 
 export interface ExpectedCooldown {
-    cdType: ECooldownType;
+    cdId?: number;
+    cdType?: ECooldownType;
     count: number;
 }
 
 export interface ExpectedCooldownCombinaison {
-    cdId?: number;
     expectedCooldowns?: ExpectedCooldown[];
     priority: number;
 }
