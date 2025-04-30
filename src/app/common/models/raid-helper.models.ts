@@ -64,3 +64,8 @@ export enum EClassName {
     Bench = 'Bench',
     Late = 'Late',
 }
+
+export interface GetRaidPlanResponse {
+    eventId: string;
+    raidDrops: RaidHelperRaidDrop[];
+}

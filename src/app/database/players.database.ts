@@ -107,11 +107,6 @@ export const PLAYERS: Player[] = [
         arrivalDate: '04-05-2025',
     },
     {
-        discordId: '223472743792771072',
-        name: 'Francis',
-        arrivalDate: '04-05-2025',
-    },
-    {
         discordId: '152379317555298304',
         name: 'Htag',
         arrivalDate: '04-05-2025',
@@ -155,11 +150,6 @@ export const PLAYERS: Player[] = [
     {
         discordId: '269197306664845314',
         name: 'Simba',
-        arrivalDate: '04-05-2025',
-    },
-    {
-        discordId: '286632869546164224',
-        name: 'Spread',
         arrivalDate: '04-05-2025',
     },
     {

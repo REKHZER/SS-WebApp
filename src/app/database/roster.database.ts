@@ -1,25 +1,12 @@
-import {
-    EPlayerClass,
-    EPlayerSpec,
-} from '../common/models/player-classes.models';
-import { MRTPlayer } from '../common/models/players.models';
+import { EPlayerSpec } from '../common/models/player-classes.models';
+import { Player2 } from '../common/models/players.models';
 
-export const ROSTER: MRTPlayer[] = [
+export const ROSTER: Player2[] = [
     {
         name: 'Rekh',
-        class: EPlayerClass.Rogue,
-        mainSpec: EPlayerSpec.RogueAssassination,
-    },
-    {
-        name: 'Htag',
-        class: EPlayerClass.Paladin,
-        mainSpec: EPlayerSpec.PaladinProtection,
-        offSpec: EPlayerSpec.PaladinHoly,
-    },
-    {
-        name: 'Zouga',
-        class: EPlayerClass.Mage,
-        mainSpec: EPlayerSpec.MageFire,
-        offSpec: EPlayerSpec.MageArcane,
+        discordId: '161896510806687744',
+        arrivalDate: '04-05-2025',
+        mainSpecs: [EPlayerSpec.DeathKnightBlood, EPlayerSpec.MonkBrewmaster],
+        offSpecs: [EPlayerSpec.HunterSurvival, EPlayerSpec.RogueSubtlety],
     },
 ];

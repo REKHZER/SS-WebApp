@@ -4,6 +4,7 @@ import { ISOTime } from './date.models';
 export interface Boss {
     name: string;
     spells: BossSpell[];
+    note?: string;
 }
 
 export interface BossSpell {

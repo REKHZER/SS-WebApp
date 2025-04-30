@@ -5,3 +5,14 @@ table {
 tr.disabled {
     background-color: grey;
 }
+
+.mrt-players-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+mat-card {
+    margin: 20px 0;
+}

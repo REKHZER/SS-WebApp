@@ -13,3 +13,11 @@ export interface MRTPlayer {
     mainSpec: EPlayerSpec;
     offSpec?: EPlayerSpec;
 }
+
+export interface Player2 {
+    name: string;
+    discordId: string;
+    arrivalDate: ISODate;
+    mainSpecs: EPlayerSpec[];
+    offSpecs: EPlayerSpec[];
+}

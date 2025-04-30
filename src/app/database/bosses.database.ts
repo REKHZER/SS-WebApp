@@ -233,4 +233,126 @@ export const Morshok: Boss = {
     ],
 };
 
+export const Zorlok: Boss = {
+    name: "Zor'Lok",
+    spells: [
+        {
+            isChecked: true,
+            name: 'F&V 1',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:00:00', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122713:1}{spell:122713} F&V 1 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 2',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:00:00', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122713:2}{spell:122713} F&V 2 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 3',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:00:00', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122713:3}{spell:122713} F&V 3 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 4',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:00:00', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122713:4}{spell:122713} F&V 4 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Phase 2',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:05:00', // TODO
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:01,SCC:123833:1}|cffFFA500 Phase 2 |r \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 1',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:05:42', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:00:42,SCC:123833:1}{spell:122713} F&V 1 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 2',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:06:31', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:01:31,SCC:123833:1}{spell:122713} F&V 2 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'F&V 3',
+            spellId: 0, // TODO
+            occurance: 1, // TODO
+            timer: '00:07:18', // TODO
+            attribs: [],
+            exceptedCds: [
+                {
+                    cdId: 16190, // SLT
+                    priority: 1,
+                },
+            ],
+            noteTemplate: `{time:02:18,SCC:123833:1}{spell:122713} F&V 3 - [ATTRIBS] \n`,
+        },
+    ],
+};
+
 export const DragonSoul: Boss[] = [Morshok];
+export const HeartOfFear: Boss[] = [Zorlok];

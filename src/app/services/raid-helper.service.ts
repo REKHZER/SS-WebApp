@@ -5,18 +5,14 @@ import {
     GetEventsResponse,
     RaidHelperRaidDrop,
     RaidHelperEvent,
+    GetRaidPlanResponse,
 } from '../common/models/raid-helper.models';
 
 @Injectable({ providedIn: 'root' })
 export class RaidHelperService {
     constructor(private httpClient: HttpClient) {}
 
-    getRaidplan = (
-        eventId: string,
-    ): Observable<{
-        eventId: string;
-        raidDrops: RaidHelperRaidDrop[];
-    } | null> =>
+    getRaidplan = (eventId: string): Observable<GetRaidPlanResponse | null> =>
         this.httpClient
             .get<{ hash: string; raidDrop: RaidHelperRaidDrop[] }>(
                 `https://raid-helper.dev/api/raidplan/${eventId}`,

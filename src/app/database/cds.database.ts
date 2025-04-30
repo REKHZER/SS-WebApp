@@ -131,7 +131,7 @@ export const ALL_CDS: Cooldown[] = [
         name: 'Mana Tide Totem',
         specs: [EPlayerSpec.ShamanRestoration],
         cooldown: '00:03:00',
-        spellId: 16190,
+        spellId: 12,
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/spell_frost_summonwaterelemental.jpg',
         ),
