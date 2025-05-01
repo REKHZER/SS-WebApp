@@ -30,3 +30,23 @@ export const addISOTimes = (...times: ISOTime[]): ISOTime => {
         totalMinutes,
     ).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}` as ISOTime;
 };
+
+export const diffISOTimes = (time1: ISOTime, time2: ISOTime): ISOTime => {
+    const toSeconds = (time: ISOTime): number => {
+        const [h, m, s] = time.split(':').map(Number);
+        return h * 3600 + m * 60 + s;
+    };
+
+    const fromSeconds = (totalSeconds: number): ISOTime => {
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(
+            2,
+            '0',
+        )}:${String(seconds).padStart(2, '0')}` as ISOTime;
+    };
+
+    const diffInSeconds = Math.abs(toSeconds(time1) - toSeconds(time2));
+    return fromSeconds(diffInSeconds);
+};

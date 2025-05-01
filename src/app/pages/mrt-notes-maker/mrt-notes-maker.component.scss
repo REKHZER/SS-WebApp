@@ -16,3 +16,29 @@ tr.disabled {
 mat-card {
     margin: 20px 0;
 }
+
+mat-chip.disabled {
+    background-color: #fbcfb7;
+}
+
+mat-chip.unused {
+    background-color: #fbcfb7;
+}
+
+table {
+    tr:nth-child(even) {
+        background-color: #e3e3e3;
+    }
+}
+
+td.small {
+    width: 50px;
+}
+
+td.medium {
+    width: 100px;
+}
+
+mat-expansion-panel-header {
+    background-color: #e3e3e3;
+}

@@ -142,12 +142,12 @@ export const ALL_CDS: Cooldown[] = [
         name: 'Spirit Link Totem',
         specs: [EPlayerSpec.ShamanRestoration],
         cooldown: '00:03:00',
-        spellId: 16190,
+        spellId: 98008,
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/spell_shaman_spiritlink.jpg',
         ),
         types: [ECooldownType.reducMagic, ECooldownType.reducPhysic],
-        priority: 1,
+        priority: 2,
     },
     {
         name: 'Power Word: Barrier',
@@ -158,11 +158,11 @@ export const ALL_CDS: Cooldown[] = [
             'https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordbarrier.jpg',
         ),
         types: [ECooldownType.reducMagic, ECooldownType.reducPhysic],
-        priority: 2,
+        priority: 1,
     },
     {
         name: 'Divine Hymn',
-        specs: [EPlayerSpec.PriestDiscipline, EPlayerSpec.PriestHoly],
+        specs: [EPlayerSpec.PriestHoly],
         cooldown: '00:08:00',
         spellId: 64843,
         iconUrl: new URL(
@@ -253,19 +253,8 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_healingtide.jpg',
         ),
-        types: [ECooldownType.healing],
-        priority: 10,
-    },
-    {
-        name: 'Ancestral Guidance',
-        specs: [EPlayerSpec.ShamanRestoration],
-        cooldown: '00:02:00',
-        spellId: 108281,
-        iconUrl: new URL(
-            'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_ancestralguidance.jpg',
-        ),
-        types: [ECooldownType.healing],
-        priority: 1,
+        types: [ECooldownType.supportHealing],
+        priority: 2,
     },
     {
         name: 'Ancestral Guidance',
@@ -275,8 +264,24 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/ability_shaman_ancestralguidance.jpg',
         ),
-        types: [ECooldownType.healing],
-        priority: 10,
+        types: [ECooldownType.supportHealing],
+        priority: 1,
+    },
+    {
+        name: 'Stampeding Roar',
+        specs: [
+            EPlayerSpec.DruidBalance,
+            EPlayerSpec.DruidFeral,
+            EPlayerSpec.DruidGuardian,
+            EPlayerSpec.DruidRestoration,
+        ],
+        cooldown: '00:02:00',
+        spellId: 77761,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/spell_druid_stamedingroar.jpg',
+        ),
+        types: [ECooldownType.speedBoost],
+        priority: 1,
     },
 ];
 

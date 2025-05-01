@@ -9,7 +9,7 @@ export const PLAYERS: Player[] = [
     {
         discordId: '245291469793918987',
         name: 'Cancun',
-        arrivalDate: '12-05-2025',
+        arrivalDate: '04-12-2025',
     },
     {
         discordId: '488763371013799948',
@@ -44,7 +44,7 @@ export const PLAYERS: Player[] = [
     {
         discordId: '319492380304605184',
         name: 'Sliane',
-        arrivalDate: '12-05-2025',
+        arrivalDate: '05-10-2025',
     },
     {
         discordId: '133202434788032512',
@@ -94,11 +94,6 @@ export const PLAYERS: Player[] = [
     {
         discordId: '200325165962231808',
         name: 'Diicee',
-        arrivalDate: '04-05-2025',
-    },
-    {
-        discordId: '332504797888643074',
-        name: 'Drenge',
         arrivalDate: '04-05-2025',
     },
     {

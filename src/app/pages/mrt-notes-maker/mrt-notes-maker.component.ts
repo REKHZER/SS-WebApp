@@ -1,3 +1,9 @@
+import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
+import {
+    CdkDragDrop,
+    copyArrayItem,
+    DragDropModule,
+} from '@angular/cdk/drag-drop';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CommonModule } from '@angular/common';
 import {
@@ -11,23 +17,29 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Boss, BossSpell } from '../../common/models/bosses.models';
-import { CooldownAttrib } from '../../common/models/cds.models';
+import { CooldownAttrib, CooldownPlayer } from '../../common/models/cds.models';
+import {
+    diffISOTimes,
+    isISOTimeGreater,
+} from '../../common/models/date.models';
 import {
     getAvailableCooldownPlayers,
     getFilterCdsWithType,
     resetAttribs,
 } from '../../common/utils/cds.utils';
 import { HeartOfFear } from '../../database/bosses.database';
+import { EIcons } from '../../database/icons.database';
 import { RaidHelperService } from '../../services/raid-helper.service';
 import { MrtNotesMakerStore } from './mrt-notes-maker.store';
 import { bossNoteToMRTNote, getClassIcon } from './mrt-notes-maker.utils';
-import { EIcons } from '../../database/icons.database';
-import { ClipboardModule } from '@angular/cdk/clipboard';
-import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 @Component({
     selector: 'app-mrt-notes-makers',
     templateUrl: 'mrt-notes-maker.component.html',
@@ -45,18 +57,23 @@ import { MatIconModule } from '@angular/material/icon';
         MatCardModule,
         ClipboardModule,
         MatIconModule,
+        DragDropModule,
+        MatExpansionModule,
     ],
     providers: [RaidHelperService, MrtNotesMakerStore],
 })
 export class MrtNotesMakerComponent {
-    raidHelperService = inject(RaidHelperService);
-    mrtNotesMakerStore = inject(MrtNotesMakerStore);
+    private raidHelperService = inject(RaidHelperService);
+    private mrtNotesMakerStore = inject(MrtNotesMakerStore);
+    private clipboard = inject(Clipboard);
+    private snackBar = inject(MatSnackBar);
 
     EIcons = EIcons;
     getClassIcon = getClassIcon;
 
     HeartOfFear = HeartOfFear;
     playersS = toSignal(this.mrtNotesMakerStore.mrtPlayers$);
+    allCdsS = toSignal(this.mrtNotesMakerStore.allCds$);
 
     eventIdS = signal<string | null>('1363850553901187162');
 
@@ -99,19 +116,21 @@ export class MrtNotesMakerComponent {
             if (exceptedCombinaison.expectedCooldowns) {
                 for (const item of exceptedCombinaison.expectedCooldowns) {
                     if (item.cdId) {
-                        const cd = availableCds.find(
+                        const cds = availableCds.filter(
                             x => x.cd.spellId === item.cdId,
                         );
 
-                        if (cd) {
-                            newAttribs = [
-                                ...newAttribs,
-                                {
-                                    player: cd.player,
-                                    cd: cd.cd,
-                                    timer: bossSpell.timer,
-                                },
-                            ];
+                        for (let index = 0; index < item.count; index++) {
+                            if (cds[index]) {
+                                newAttribs = [
+                                    ...newAttribs,
+                                    {
+                                        player: cds[index].player,
+                                        cd: cds[index].cd,
+                                        timer: bossSpell.timer,
+                                    },
+                                ];
+                            }
                         }
                     } else if (item.cdType) {
                         const filteredCds = getFilterCdsWithType(
@@ -144,8 +163,6 @@ export class MrtNotesMakerComponent {
             bossSpell.attribs = [...bossSpell.attribs, ...newAttribs];
             break;
         }
-
-        bossNote.note = bossNoteToMRTNote(bossNote);
     }
 
     loadRaidPlan(): void {
@@ -154,5 +171,75 @@ export class MrtNotesMakerComponent {
             return;
         }
         this.mrtNotesMakerStore.getRaidPlanEffect(eventId);
+    }
+
+    drop(
+        event: CdkDragDrop<CooldownAttrib[], CooldownAttrib[], any>,
+        spell: BossSpell,
+    ) {
+        if (!event.container.data) {
+            return;
+        }
+
+        copyArrayItem(
+            event.previousContainer.data.map(x => ({
+                ...x,
+                timer: spell.timer,
+            })),
+            event.container.data,
+            event.previousIndex,
+            event.currentIndex,
+        );
+    }
+
+    removeAttrib(allAttribs: CooldownAttrib[], attrib: CooldownAttrib) {
+        const index = allAttribs.findIndex(
+            x => x.cd === attrib.cd && x.player === attrib.player,
+        );
+
+        if (index !== -1) {
+            allAttribs.splice(index, 1);
+        }
+    }
+
+    exportNote(boss: Boss) {
+        boss.note = bossNoteToMRTNote(boss);
+        this.clipboard.copy(boss.note);
+        this.snackBar.open('Note copié', 'Fermer', {
+            duration: 1000,
+        });
+    }
+
+    resetNote(boss: Boss) {
+        resetAttribs(boss);
+        boss.note = undefined;
+    }
+
+    isCdAvailable(boss: Boss, bossSpell: BossSpell, cd: CooldownPlayer) {
+        const allAttribs = boss.spells.map(x => x.attribs).flat();
+        const attribOfSameCdPlayer = allAttribs.filter(
+            x =>
+                x.cd.spellId === cd.cd.spellId &&
+                x.player.name === cd.player.name &&
+                x.timer !== bossSpell.timer,
+        );
+
+        for (const element of attribOfSameCdPlayer) {
+            const timeDiff = diffISOTimes(element.timer, bossSpell.timer);
+            const test = isISOTimeGreater(cd.cd.cooldown, timeDiff);
+
+            if (test) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    isCdUsed(boss: Boss, cd: CooldownPlayer) {
+        const allAttribs = boss.spells.map(x => x.attribs).flat();
+        return !allAttribs.some(
+            x => x.cd === cd.cd && x.player.name === cd.player.name,
+        );
     }
 }

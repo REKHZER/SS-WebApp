@@ -1,10 +1,11 @@
-import { CooldownAttrib, ECooldownType } from './cds.models';
+import { CooldownAttrib, CooldownPlayer, ECooldownType } from './cds.models';
 import { ISOTime } from './date.models';
 
 export interface Boss {
     name: string;
     spells: BossSpell[];
     note?: string;
+    unusedCds?: CooldownPlayer[];
 }
 
 export interface BossSpell {

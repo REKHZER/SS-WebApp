@@ -74,6 +74,10 @@ export const getAvailableCooldownPlayers = (
                 y => y.cd.spellId === cd.cd.spellId && y.player === cd.player,
             );
 
+            if (!attribOfPlayerCD.length) {
+                return true;
+            }
+
             return (
                 attribOfPlayerCD.length === 0 ||
                 attribOfPlayerCD.every(

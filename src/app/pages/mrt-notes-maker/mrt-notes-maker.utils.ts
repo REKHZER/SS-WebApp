@@ -22,25 +22,18 @@ export const bossNoteToMRTNote = (boss: Boss): string => {
         let attribNote = '';
         let index = 0;
         for (const attrib of spell.attribs) {
-            if (index > 0) {
-                attribNote += ' | ';
-            } else {
-                attribNote += ' ';
-            }
-            attribNote += `${attrib.player.name} {spell:${attrib.cd.spellId}}`;
+            attribNote += `${attrib.player.name} {spell:${attrib.cd.spellId}}  `;
             index++;
         }
         note += spell.noteTemplate.replace('[ATTRIBS]', attribNote);
     }
 
-    console.log('\n\n ~ bossNoteToMRTNote ~ note:', note);
     return note;
 };
 
 export const raidDropToRoster = (
     raidDrop: RaidHelperRaidDrop[],
 ): MRTPlayer[] => {
-    console.log('\n\n ~ raidDrop:', raidDrop);
     return raidDrop.reduce<MRTPlayer[]>((acc, curr) => {
         const classFromSpec = getClassFromSpecId(curr.class + curr.spec);
         const spec = getSpecFromId(curr.class + curr.spec);
