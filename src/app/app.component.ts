@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { RouterOutlet } from '@angular/router';
 import { SwUpdate, VersionEvent } from '@angular/service-worker';
 import { filter } from 'rxjs';
-import { SitemapComponent } from './common/sitemap/sitemap.component';
 import { UpdateDialogComponent } from './common/update-dialog/update-dialog.component';
 
 @Component({
@@ -11,7 +10,7 @@ import { UpdateDialogComponent } from './common/update-dialog/update-dialog.comp
     templateUrl: './app.component.html',
     styleUrls: ['app.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [RouterOutlet, SitemapComponent],
+    imports: [RouterOutlet],
 })
 export class AppComponent {
     readonly dialog = inject(MatDialog);

@@ -1,0 +1,17 @@
+<div class="container-fluid h-100 test">
+    <div
+        class="d-flex flex-column align-items-center h-100 justify-content-center"
+    >
+        <img src="images/ss-logo.png" width="500px" />
+        <mat-form-field>
+            <mat-label>Mot de passe</mat-label>
+            <input
+                matInput
+                type="text"
+                [ngModel]="tokenS()"
+                (ngModelChange)="tokenS.set($event)"
+            />
+        </mat-form-field>
+        <button mat-flat-button (click)="setAuthToken()">Valider</button>
+    </div>
+</div>

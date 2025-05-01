@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746089775226,
+  "timestamp": 1746091725490,
   "index": "/SS-WebApp/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/SS-WebApp/favicon.ico",
         "/SS-WebApp/index.html",
-        "/SS-WebApp/main-WKOY4TO6.js",
+        "/SS-WebApp/main-7WGJIOJM.js",
         "/SS-WebApp/manifest.webmanifest",
         "/SS-WebApp/polyfills-EQXJKH7W.js",
         "/SS-WebApp/styles-NWITZWFM.css"
@@ -36,7 +36,8 @@
         "/SS-WebApp/icons/icon-512x512.png",
         "/SS-WebApp/icons/icon-72x72.png",
         "/SS-WebApp/icons/icon-96x96.png",
-        "/SS-WebApp/images/mop.png"
+        "/SS-WebApp/images/mop.png",
+        "/SS-WebApp/images/ss-logo.png"
       ],
       "patterns": []
     }
@@ -53,8 +54,9 @@
     "/SS-WebApp/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/SS-WebApp/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
     "/SS-WebApp/images/mop.png": "0dc9cf0a94bfb52611dc1da00ffdfdb31576cf5c",
-    "/SS-WebApp/index.html": "4ecd433d9f17495a798eb7c39ae20fb7b6b25da7",
-    "/SS-WebApp/main-WKOY4TO6.js": "61af94a768547023ae1bdd50dc4d1dd48dbd1079",
+    "/SS-WebApp/images/ss-logo.png": "9565963dcf86dcd5b69648743c8e5694f5df45fd",
+    "/SS-WebApp/index.html": "2c032b6404065ee0fa46ab6c1f294379fb5433bf",
+    "/SS-WebApp/main-7WGJIOJM.js": "5bf8bc40961b34a3a568e44a5df72a58f9ada018",
     "/SS-WebApp/manifest.webmanifest": "312c251d003939df29c1d32a2891c002dcf1db71",
     "/SS-WebApp/polyfills-EQXJKH7W.js": "d8301403135d2a2a157cb2e2394c22f3fc0b5801",
     "/SS-WebApp/styles-NWITZWFM.css": "c06b936a30902042e222c3e932c11e2cd3e17368"
