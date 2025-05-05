@@ -1,5 +1,10 @@
 import { Boss } from '../../common/models/bosses.models';
 import {
+    Cooldown,
+    CooldownPlayer,
+    ECooldownType,
+} from '../../common/models/cds.models';
+import {
     EPlayerClass,
     EPlayerSpec,
 } from '../../common/models/player-classes.models';
@@ -154,4 +159,15 @@ export const getClassIcon = (classSpec: EPlayerSpec): EIcons => {
         default:
             return EIcons.ArmWar;
     }
+};
+
+export const filterCdWithType = (
+    cds: CooldownPlayer[] | undefined,
+    type: ECooldownType,
+): CooldownPlayer[] => {
+    if (!cds) {
+        return [];
+    }
+
+    return cds.filter(x => x.cd.types.includes(type));
 };

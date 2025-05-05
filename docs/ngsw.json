@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1746091725490,
+  "timestamp": 1746445299458,
   "index": "/SS-WebApp/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/SS-WebApp/favicon.ico",
         "/SS-WebApp/index.html",
-        "/SS-WebApp/main-7WGJIOJM.js",
+        "/SS-WebApp/main-TPRPYNGF.js",
         "/SS-WebApp/manifest.webmanifest",
         "/SS-WebApp/polyfills-EQXJKH7W.js",
         "/SS-WebApp/styles-NWITZWFM.css"
@@ -36,8 +36,14 @@
         "/SS-WebApp/icons/icon-512x512.png",
         "/SS-WebApp/icons/icon-72x72.png",
         "/SS-WebApp/icons/icon-96x96.png",
+        "/SS-WebApp/images/elegon.png",
+        "/SS-WebApp/images/feng.png",
+        "/SS-WebApp/images/garalaj.png",
         "/SS-WebApp/images/mop.png",
-        "/SS-WebApp/images/ss-logo.png"
+        "/SS-WebApp/images/spirit-kings.png",
+        "/SS-WebApp/images/ss-logo.png",
+        "/SS-WebApp/images/stone-guard.png",
+        "/SS-WebApp/images/will-of-the-emperor.png"
       ],
       "patterns": []
     }
@@ -53,10 +59,16 @@
     "/SS-WebApp/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/SS-WebApp/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/SS-WebApp/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/SS-WebApp/images/elegon.png": "59f95b39269f0250ff1c9c6eb975b57695422a09",
+    "/SS-WebApp/images/feng.png": "27a623f76dbb5e25554fa7cc3142629ee2ac9486",
+    "/SS-WebApp/images/garalaj.png": "f7b9e04566e63a68f42ccc23a917a6065c0d576c",
     "/SS-WebApp/images/mop.png": "0dc9cf0a94bfb52611dc1da00ffdfdb31576cf5c",
+    "/SS-WebApp/images/spirit-kings.png": "4e19de3257c8ed83ecc31ad2567097edbb004cfa",
     "/SS-WebApp/images/ss-logo.png": "9565963dcf86dcd5b69648743c8e5694f5df45fd",
-    "/SS-WebApp/index.html": "2c032b6404065ee0fa46ab6c1f294379fb5433bf",
-    "/SS-WebApp/main-7WGJIOJM.js": "5bf8bc40961b34a3a568e44a5df72a58f9ada018",
+    "/SS-WebApp/images/stone-guard.png": "bb221f8e4102bb6af505761651538731e4283b0f",
+    "/SS-WebApp/images/will-of-the-emperor.png": "e783ee10da1ebbb342f929427021b754324a73dc",
+    "/SS-WebApp/index.html": "3a89fa07afb0db444028196a35c4d3ed085dbd20",
+    "/SS-WebApp/main-TPRPYNGF.js": "12503ef975d1ae517df2decef0a3509326bec101",
     "/SS-WebApp/manifest.webmanifest": "312c251d003939df29c1d32a2891c002dcf1db71",
     "/SS-WebApp/polyfills-EQXJKH7W.js": "d8301403135d2a2a157cb2e2394c22f3fc0b5801",
     "/SS-WebApp/styles-NWITZWFM.css": "c06b936a30902042e222c3e932c11e2cd3e17368"

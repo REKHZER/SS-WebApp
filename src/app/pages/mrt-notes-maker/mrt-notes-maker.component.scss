@@ -1,3 +1,19 @@
+.page-container {
+    display: flex;
+    gap: 20px;
+
+    .first-container {
+        width: 50%;
+    }
+
+    .attribs-section {
+        width: 40%;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+    }
+}
+
 table {
     width: 100%;
 }
@@ -10,7 +26,7 @@ tr.disabled {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 mat-card {

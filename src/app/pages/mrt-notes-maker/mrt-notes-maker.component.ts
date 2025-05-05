@@ -1,4 +1,4 @@
-import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
+import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
 import {
     CdkDragDrop,
     copyArrayItem,
@@ -20,10 +20,16 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterModule } from '@angular/router';
 import { Boss, BossSpell } from '../../common/models/bosses.models';
-import { CooldownAttrib, CooldownPlayer } from '../../common/models/cds.models';
+import {
+    CooldownAttrib,
+    CooldownPlayer,
+    ECooldownType,
+} from '../../common/models/cds.models';
 import {
     diffISOTimes,
     isISOTimeGreater,
@@ -33,12 +39,20 @@ import {
     getFilterCdsWithType,
     resetAttribs,
 } from '../../common/utils/cds.utils';
-import { HeartOfFear } from '../../database/bosses.database';
+import {
+    ALL_BOSSES,
+    HeartOfFear,
+    MoguShanVault,
+} from '../../database/bosses.database';
 import { EIcons } from '../../database/icons.database';
 import { RaidHelperService } from '../../services/raid-helper.service';
 import { MrtNotesMakerStore } from './mrt-notes-maker.store';
-import { bossNoteToMRTNote, getClassIcon } from './mrt-notes-maker.utils';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import {
+    bossNoteToMRTNote,
+    filterCdWithType,
+    getClassIcon,
+} from './mrt-notes-maker.utils';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
     selector: 'app-mrt-notes-makers',
@@ -59,21 +73,29 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
         MatIconModule,
         DragDropModule,
         MatExpansionModule,
+        RouterModule,
+        MatSelectModule,
     ],
     providers: [RaidHelperService, MrtNotesMakerStore],
 })
 export class MrtNotesMakerComponent {
-    private raidHelperService = inject(RaidHelperService);
     private mrtNotesMakerStore = inject(MrtNotesMakerStore);
     private clipboard = inject(Clipboard);
     private snackBar = inject(MatSnackBar);
 
     EIcons = EIcons;
+    ECooldownType = ECooldownType;
     getClassIcon = getClassIcon;
+    filterCdWithType = filterCdWithType;
+    ALL_BOSSES = ALL_BOSSES;
+
+    CdTypes: ECooldownType[] = [];
 
     HeartOfFear = HeartOfFear;
+    MoguShanVault = MoguShanVault;
     playersS = toSignal(this.mrtNotesMakerStore.mrtPlayers$);
     allCdsS = toSignal(this.mrtNotesMakerStore.allCds$);
+    selectedBossS = signal<Boss>(MoguShanVault[0]);
 
     eventIdS = signal<string | null>('1363850553901187162');
 
