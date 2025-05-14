@@ -162,4 +162,24 @@ export const PLAYERS: Player[] = [
         name: 'Zouga',
         arrivalDate: '04-05-2025',
     },
+    {
+        discordId: '107196791300034560',
+        name: 'Aicha',
+        arrivalDate: '10-05-2025',
+    },
+    {
+        discordId: '342001920807927810',
+        name: 'Shynnus',
+        arrivalDate: '10-05-2025',
+    },
+    {
+        discordId: '494247195814658050',
+        name: 'Philas',
+        arrivalDate: '10-05-2025',
+    },
+    {
+        discordId: '949955793359368212',
+        name: 'Saraka',
+        arrivalDate: '10-05-2025',
+    },
 ];
