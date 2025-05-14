@@ -28,7 +28,7 @@ export class RaidHelperService {
             `https://raid-helper.dev/api/v2/events/${eventId}`,
         );
 
-    getEvents = () =>
+    getEvents = (channelFilter: string) =>
         this.httpClient
             .get<GetEventsResponse>(
                 `https://raid-helper.dev/api/v3/servers/1183372485488562246/events`,
@@ -37,7 +37,7 @@ export class RaidHelperService {
                         Authorization:
                             'tgrUQdfcYv6UfjFnnO4mZzGN8cVvQi5YzNH0GRlq',
                         IncludeSignUps: 'true',
-                        ChannelFilter: '1316074810559959090',
+                        ChannelFilter: channelFilter,
                         StartTimeFilter: '1743870277', // 05-04-2025
                     },
                 },

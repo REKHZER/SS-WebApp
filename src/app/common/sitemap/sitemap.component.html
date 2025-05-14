@@ -25,7 +25,16 @@
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
         >
-            Présences
+            Présences Pserv
+        </a>
+        <a
+            class="button mod-outlined sitemap-nav-item"
+            [routerLink]="['/attendance']"
+            [queryParams]="{ ptr: true }"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >
+            Présences PTR
         </a>
     </div>
 </div>

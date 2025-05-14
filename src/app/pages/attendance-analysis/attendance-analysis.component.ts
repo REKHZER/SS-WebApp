@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { AttendanceInfo } from '../../common/models/attendance.models';
 import { AttendanceStore } from './attendance.store';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-attendance-analysis',
@@ -15,6 +16,7 @@ import { AttendanceStore } from './attendance.store';
 })
 export class AttendanceAnalysisComponent {
     attendanceStore = inject(AttendanceStore);
+    activatedRoute = inject(ActivatedRoute);
 
     attedanceInfos: AttendanceInfo[] = [];
 
@@ -30,7 +32,22 @@ export class AttendanceAnalysisComponent {
     ];
 
     async ngOnInit() {
-        this.attendanceStore.getAttendanceInfosEffect();
+        this.activatedRoute.queryParams.subscribe(params => {
+            this.attendanceStore.setState(state => ({
+                ...state,
+                isPtr: false,
+            }));
+
+            if (params['ptr'] === 'true') {
+                console.log('icicici');
+                this.attendanceStore.setState(state => ({
+                    ...state,
+                    isPtr: true,
+                }));
+            }
+
+            this.attendanceStore.getAttendanceInfosEffect();
+        });
     }
 
     sortChange(attendanceInfos: AttendanceInfo[], sort: Sort) {
