@@ -14,7 +14,7 @@ export interface Cooldown {
 
 export interface CooldownPlayer {
     player: MRTPlayer;
-    cd: Cooldown;
+    cd?: Cooldown;
 }
 
 export interface CooldownAttrib extends CooldownPlayer {

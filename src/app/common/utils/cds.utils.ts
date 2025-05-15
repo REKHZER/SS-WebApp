@@ -49,7 +49,7 @@ export const getCdsOfTypes = (cdTypes: ECooldownType[]): Cooldown[] =>
 export const getFilterCdsWithType = (
     cds: CooldownPlayer[],
     cdType: ECooldownType,
-): CooldownPlayer[] => cds.filter(x => x.cd.types.includes(cdType));
+): CooldownPlayer[] => cds.filter(x => x.cd && x.cd.types.includes(cdType));
 
 export const getCooldownPlayers = (players: MRTPlayer[]): CooldownPlayer[] =>
     players.reduce<CooldownPlayer[]>(
@@ -71,7 +71,11 @@ export const getAvailableCooldownPlayers = (
     return getCooldownPlayers(players)
         .filter(cd => {
             const attribOfPlayerCD = attribs.filter(
-                y => y.cd.spellId === cd.cd.spellId && y.player === cd.player,
+                y =>
+                    y.cd &&
+                    cd.cd &&
+                    y.cd.spellId === cd.cd.spellId &&
+                    y.player === cd.player,
             );
 
             if (!attribOfPlayerCD.length) {
@@ -82,6 +86,8 @@ export const getAvailableCooldownPlayers = (
                 attribOfPlayerCD.length === 0 ||
                 attribOfPlayerCD.every(
                     y =>
+                        y.cd &&
+                        cd.cd &&
                         y.cd.spellId === cd.cd.spellId &&
                         y.player === cd.player &&
                         !isISOTimeGreater(
@@ -91,7 +97,7 @@ export const getAvailableCooldownPlayers = (
                 )
             );
         })
-        .sort((a, b) => a.cd.priority - b.cd.priority); // Trie par priorité croissante;
+        .sort((a, b) => (a.cd && b.cd ? a.cd.priority - b.cd.priority : 0)); // Trie par priorité croissante;
 };
 
 export const resetAttribs = (bossNote: Boss): Boss => {

@@ -115,9 +115,11 @@
                                     of element.attribs; track $index) {
                                     <mat-chip
                                         [matTooltip]="
-                                            attrib.cd.name +
-                                            ' : ' +
-                                            attrib.cd.cooldown
+                                            attrib.cd
+                                                ? attrib.cd.name +
+                                                  ' : ' +
+                                                  attrib.cd.cooldown
+                                                : ''
                                         "
                                         [ngClass]="{
                                             disabled: !isCdAvailable(
@@ -129,7 +131,12 @@
                                     >
                                         <img
                                             matChipAvatar
-                                            *ngIf="attrib.cd.iconUrl as src"
+                                            *ngIf="
+                                                attrib.cd?.iconUrl ||
+                                                getClassIcon(
+                                                    attrib.player.mainSpec
+                                                ) as src
+                                            "
                                             [src]="src"
                                             height="25"
                                         />
@@ -193,9 +200,13 @@
                     <mat-panel-title> Roster </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <div class="mrt-players-container">
+                <div
+                    class="mrt-players-container"
+                    cdkDropList
+                    [cdkDropListData]="playersS()"
+                >
                     @for(player of playersS(); track player) {
-                    <mat-chip [matTooltip]="player.mainSpec">
+                    <mat-chip cdkDrag [matTooltip]="player.mainSpec">
                         <img
                             matChipAvatar
                             [src]="getClassIcon(player.mainSpec)"
@@ -210,7 +221,7 @@
 
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
-                    <mat-panel-title> Raid Cds </mat-panel-title>
+                    <mat-panel-title> All Cds </mat-panel-title>
                 </mat-expansion-panel-header>
 
                 @if(allCdsS()?.length) {
@@ -222,14 +233,14 @@
                     @for(cd of allCdsS(); track cd) {
                     <mat-chip
                         cdkDrag
-                        [matTooltip]="cd.cd.name + ' : ' + cd.cd.cooldown"
+                        [matTooltip]="cd.cd?.name + ' : ' + cd.cd?.cooldown"
                         [ngClass]="{
                             unused: isCdUsed(boss, cd)
                         }"
                     >
                         <img
                             matChipAvatar
-                            *ngIf="cd.cd.iconUrl as src"
+                            *ngIf="cd.cd?.iconUrl as src"
                             [src]="src"
                             height="25"
                         />
@@ -256,14 +267,14 @@
                     @for(cd of test; track cd) {
                     <mat-chip
                         cdkDrag
-                        [matTooltip]="cd.cd.name + ' : ' + cd.cd.cooldown"
+                        [matTooltip]="cd.cd?.name + ' : ' + cd.cd?.cooldown"
                         [ngClass]="{
                             unused: isCdUsed(boss, cd)
                         }"
                     >
                         <img
                             matChipAvatar
-                            *ngIf="cd.cd.iconUrl as src"
+                            *ngIf="cd.cd?.iconUrl as src"
                             [src]="src"
                             height="25"
                         />

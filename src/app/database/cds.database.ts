@@ -283,6 +283,43 @@ export const ALL_CDS: Cooldown[] = [
         types: [ECooldownType.speedBoost],
         priority: 1,
     },
+    {
+        name: 'Vigilance',
+        specs: [
+            EPlayerSpec.WarArms,
+            EPlayerSpec.WarFury,
+            EPlayerSpec.WarProtection,
+        ],
+        cooldown: '00:02:00',
+        spellId: 114030,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_vigilance.jpg',
+        ),
+        types: [ECooldownType.targetedDamageReduc],
+        priority: 3,
+    },
+    {
+        name: 'Fortifying Brew',
+        specs: [EPlayerSpec.MonkBrewmaster],
+        cooldown: '00:03:00',
+        spellId: 115203,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/ability_monk_fortifyingale_new.jpg',
+        ),
+        types: [ECooldownType.targetedDamageReduc],
+        priority: 2,
+    },
+    {
+        name: 'Icebound Fortitude',
+        specs: [EPlayerSpec.DeathKnightBlood],
+        cooldown: '00:03:00',
+        spellId: 48792,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_iceboundfortitude.jpg',
+        ),
+        types: [ECooldownType.targetedDamageReduc],
+        priority: 2,
+    },
 ];
 
 // increasePoolHp = 'increasePoolHp', // Cri war, Vampiric Blood, Frenzy Regen

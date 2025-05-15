@@ -53,6 +53,7 @@ import {
     getClassIcon,
 } from './mrt-notes-maker.utils';
 import { MatSelectModule } from '@angular/material/select';
+import { filter } from 'rxjs';
 
 @Component({
     selector: 'app-mrt-notes-makers',
@@ -89,7 +90,7 @@ export class MrtNotesMakerComponent {
     filterCdWithType = filterCdWithType;
     ALL_BOSSES = ALL_BOSSES;
 
-    CdTypes: ECooldownType[] = [];
+    CdTypes: ECooldownType[] = [ECooldownType.targetedDamageReduc];
 
     HeartOfFear = HeartOfFear;
     MoguShanVault = MoguShanVault;
@@ -139,7 +140,7 @@ export class MrtNotesMakerComponent {
                 for (const item of exceptedCombinaison.expectedCooldowns) {
                     if (item.cdId) {
                         const cds = availableCds.filter(
-                            x => x.cd.spellId === item.cdId,
+                            x => x.cd && x.cd.spellId === item.cdId,
                         );
 
                         for (let index = 0; index < item.count; index++) {
@@ -203,15 +204,29 @@ export class MrtNotesMakerComponent {
             return;
         }
 
-        copyArrayItem(
-            event.previousContainer.data.map(x => ({
-                ...x,
-                timer: spell.timer,
-            })),
-            event.container.data,
-            event.previousIndex,
-            event.currentIndex,
-        );
+        const test = event.previousContainer.data[0] as any;
+
+        if (test.class) {
+            copyArrayItem(
+                event.previousContainer.data.map(x => ({
+                    player: x as any,
+                    timer: spell.timer,
+                })),
+                event.container.data,
+                event.previousIndex,
+                event.currentIndex,
+            );
+        } else {
+            copyArrayItem(
+                event.previousContainer.data.map(x => ({
+                    ...x,
+                    timer: spell.timer,
+                })),
+                event.container.data,
+                event.previousIndex,
+                event.currentIndex,
+            );
+        }
     }
 
     removeAttrib(allAttribs: CooldownAttrib[], attrib: CooldownAttrib) {
@@ -238,9 +253,15 @@ export class MrtNotesMakerComponent {
     }
 
     isCdAvailable(boss: Boss, bossSpell: BossSpell, cd: CooldownPlayer) {
+        if (!cd.cd) {
+            return true;
+        }
+
         const allAttribs = boss.spells.map(x => x.attribs).flat();
         const attribOfSameCdPlayer = allAttribs.filter(
             x =>
+                x.cd &&
+                cd.cd &&
                 x.cd.spellId === cd.cd.spellId &&
                 x.player.name === cd.player.name &&
                 x.timer !== bossSpell.timer,

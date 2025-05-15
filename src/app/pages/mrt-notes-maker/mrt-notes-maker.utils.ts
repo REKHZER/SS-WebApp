@@ -27,7 +27,11 @@ export const bossNoteToMRTNote = (boss: Boss): string => {
         let attribNote = '';
         let index = 0;
         for (const attrib of spell.attribs) {
-            attribNote += `${attrib.player.name} {spell:${attrib.cd.spellId}}  `;
+            if (attrib.cd) {
+                attribNote += `${attrib.player.name} {spell:${attrib.cd.spellId}}  `;
+            } else {
+                attribNote += `${attrib.player.name}  `;
+            }
             index++;
         }
         note += spell.noteTemplate.replace('[ATTRIBS]', attribNote);
@@ -169,5 +173,5 @@ export const filterCdWithType = (
         return [];
     }
 
-    return cds.filter(x => x.cd.types.includes(type));
+    return cds.filter(x => x.cd && x.cd.types.includes(type));
 };
