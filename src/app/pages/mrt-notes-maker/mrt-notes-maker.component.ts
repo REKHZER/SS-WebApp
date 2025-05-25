@@ -96,7 +96,7 @@ export class MrtNotesMakerComponent {
     MoguShanVault = MoguShanVault;
     playersS = toSignal(this.mrtNotesMakerStore.mrtPlayers$);
     allCdsS = toSignal(this.mrtNotesMakerStore.allCds$);
-    selectedBossS = signal<Boss>(MoguShanVault[0]);
+    selectedBoss!: Boss;
 
     eventIdS = signal<string | null>('1363850553901187162');
 
@@ -114,6 +114,8 @@ export class MrtNotesMakerComponent {
         for (const spell of filteredBossSpells) {
             this.addPlayerCD(bossNote, spell);
         }
+
+        this.saveLocalStorage();
     }
 
     private addPlayerCD(bossNote: Boss, bossSpell: BossSpell): void {
@@ -190,16 +192,24 @@ export class MrtNotesMakerComponent {
 
     loadRaidPlan(): void {
         const eventId = this.eventIdS();
+
         if (!eventId) {
             return;
         }
+
+        const localSave = localStorage.getItem(eventId);
+        if (localSave) {
+            this.ALL_BOSSES = JSON.parse(localSave);
+        }
+        this.selectedBoss = this.ALL_BOSSES[0];
+
         this.mrtNotesMakerStore.getRaidPlanEffect(eventId);
     }
 
     drop(
         event: CdkDragDrop<CooldownAttrib[], CooldownAttrib[], any>,
         spell: BossSpell,
-    ) {
+    ): void {
         if (!event.container.data) {
             return;
         }
@@ -227,6 +237,8 @@ export class MrtNotesMakerComponent {
                 event.currentIndex,
             );
         }
+
+        this.saveLocalStorage();
     }
 
     removeAttrib(allAttribs: CooldownAttrib[], attrib: CooldownAttrib) {
@@ -237,6 +249,8 @@ export class MrtNotesMakerComponent {
         if (index !== -1) {
             allAttribs.splice(index, 1);
         }
+
+        this.saveLocalStorage();
     }
 
     exportNote(boss: Boss) {
@@ -250,6 +264,8 @@ export class MrtNotesMakerComponent {
     resetNote(boss: Boss) {
         resetAttribs(boss);
         boss.note = undefined;
+
+        this.saveLocalStorage();
     }
 
     isCdAvailable(boss: Boss, bossSpell: BossSpell, cd: CooldownPlayer) {
@@ -284,5 +300,12 @@ export class MrtNotesMakerComponent {
         return !allAttribs.some(
             x => x.cd === cd.cd && x.player.name === cd.player.name,
         );
+    }
+
+    private saveLocalStorage() {
+        const eventId = this.eventIdS();
+        if (eventId) {
+            localStorage.setItem(eventId, JSON.stringify(this.ALL_BOSSES));
+        }
     }
 }

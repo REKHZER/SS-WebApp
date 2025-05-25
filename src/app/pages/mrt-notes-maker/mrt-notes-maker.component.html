@@ -1,4 +1,3 @@
-@let boss = selectedBossS();
 <div class="page-container" cdkDropListGroup>
     <div class="first-container">
         <h1>MRT Notes Maker</h1>
@@ -7,8 +6,8 @@
         <mat-form-field>
             <mat-label>Boss</mat-label>
             <mat-select
-                [ngModel]="selectedBossS()"
-                (ngModelChange)="selectedBossS.set($event)"
+                [ngModel]="selectedBoss"
+                (ngModelChange)="selectedBoss = $event"
             >
                 @for (boss of ALL_BOSSES; track boss) {
                 <mat-option [value]="boss">{{ boss.name }}</mat-option>
@@ -20,12 +19,12 @@
             <mat-card-content>
                 <div>
                     <div class="d-flex justify-content-between">
-                        <h3>{{ boss.name }}</h3>
+                        <h3>{{ selectedBoss.name }}</h3>
                         <div class="d-flex">
                             <button
                                 mat-button
                                 [disabled]="!playersS()?.length"
-                                (click)="resetNote(boss)"
+                                (click)="resetNote(selectedBoss)"
                             >
                                 Reinitialiser
                             </button>
@@ -33,18 +32,21 @@
                             <button
                                 mat-button
                                 [disabled]="!playersS()?.length"
-                                (click)="fillAuto(boss)"
+                                (click)="fillAuto(selectedBoss)"
                             >
                                 Remplissage AUTO
                             </button>
 
-                            <button mat-button (click)="exportNote(boss)">
+                            <button
+                                mat-button
+                                (click)="exportNote(selectedBoss)"
+                            >
                                 Copier la note
                             </button>
                         </div>
                     </div>
 
-                    <table cdk-table [dataSource]="boss.spells">
+                    <table cdk-table [dataSource]="selectedBoss.spells">
                         <!-- Checkbox -->
                         <ng-container cdkColumnDef="checkbox">
                             <th cdk-header-cell *cdkHeaderCellDef></th>
@@ -123,7 +125,7 @@
                                         "
                                         [ngClass]="{
                                             disabled: !isCdAvailable(
-                                                boss,
+                                                selectedBoss,
                                                 element,
                                                 attrib
                                             )
@@ -235,7 +237,7 @@
                         cdkDrag
                         [matTooltip]="cd.cd?.name + ' : ' + cd.cd?.cooldown"
                         [ngClass]="{
-                            unused: isCdUsed(boss, cd)
+                            unused: isCdUsed(selectedBoss, cd)
                         }"
                     >
                         <img
@@ -269,7 +271,7 @@
                         cdkDrag
                         [matTooltip]="cd.cd?.name + ' : ' + cd.cd?.cooldown"
                         [ngClass]="{
-                            unused: isCdUsed(boss, cd)
+                            unused: isCdUsed(selectedBoss, cd)
                         }"
                     >
                         <img

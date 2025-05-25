@@ -320,6 +320,17 @@ export const ALL_CDS: Cooldown[] = [
         types: [ECooldownType.targetedDamageReduc],
         priority: 2,
     },
+    {
+        name: 'Ascendance',
+        specs: [EPlayerSpec.ShamanRestoration],
+        cooldown: '00:03:00',
+        spellId: 114049,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/classic_spell_fire_elementaldevastation.jpg',
+        ),
+        types: [ECooldownType.personalHealingBuff],
+        priority: 1,
+    },
 ];
 
 // increasePoolHp = 'increasePoolHp', // Cri war, Vampiric Blood, Frenzy Regen

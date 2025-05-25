@@ -32,6 +32,10 @@ export class MrtNotesMakerStore extends ComponentStore<MrtNotesMakerStoreState> 
                 this.raidHelperService.getRaidplan(eventId).pipe(
                     tap({
                         next: raidPlan => {
+                            console.log(
+                                '\n\n ~ MrtNotesMakerStore ~ raidPlan:',
+                                raidPlan,
+                            );
                             const players = raidPlan
                                 ? raidDropToRoster(raidPlan?.raidDrops)
                                 : [];

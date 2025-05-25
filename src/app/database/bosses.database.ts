@@ -1162,7 +1162,7 @@ export const Feng: Boss = {
         },
         {
             isChecked: true,
-            name: 'AV 4',
+            name: 'EP 1',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
@@ -1170,7 +1170,7 @@ export const Feng: Boss = {
         },
         {
             isChecked: true,
-            name: 'AV 4',
+            name: 'EP 2',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
@@ -1178,7 +1178,7 @@ export const Feng: Boss = {
         },
         {
             isChecked: true,
-            name: 'AV 4',
+            name: 'EP 3',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
@@ -1186,7 +1186,7 @@ export const Feng: Boss = {
         },
         {
             isChecked: true,
-            name: 'AV 4',
+            name: 'EP 4',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
