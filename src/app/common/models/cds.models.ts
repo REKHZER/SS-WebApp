@@ -32,4 +32,5 @@ export enum ECooldownType {
     healing = 'healing', // Tranqui, Hymne Divin
     supportHealing = 'supportHealing', // AG off spec, HTT off spec
     speedBoost = 'speedBoost', // Roar
+    personalWall = 'personalWall', // Wall tanks
 }

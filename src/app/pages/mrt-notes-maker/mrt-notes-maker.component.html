@@ -3,17 +3,21 @@
         <h1>MRT Notes Maker</h1>
 
         @if(playersS()?.length) {
-        <mat-form-field>
-            <mat-label>Boss</mat-label>
-            <mat-select
-                [ngModel]="selectedBoss"
-                (ngModelChange)="selectedBoss = $event"
-            >
-                @for (boss of ALL_BOSSES; track boss) {
-                <mat-option [value]="boss">{{ boss.name }}</mat-option>
-                }
-            </mat-select>
-        </mat-form-field>
+        <div class="header">
+            <mat-form-field>
+                <mat-label>Boss</mat-label>
+                <mat-select
+                    [ngModel]="selectedBoss"
+                    (ngModelChange)="selectedBoss = $event"
+                >
+                    @for (boss of ALL_BOSSES; track boss) {
+                    <mat-option [value]="boss">{{ boss.name }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+            <button mat-button (click)="clearCache()">Clear Cache</button>
+        </div>
 
         <mat-card appearance="outlined">
             <mat-card-content>

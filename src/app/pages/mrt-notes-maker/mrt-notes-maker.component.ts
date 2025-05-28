@@ -90,7 +90,10 @@ export class MrtNotesMakerComponent {
     filterCdWithType = filterCdWithType;
     ALL_BOSSES = ALL_BOSSES;
 
-    CdTypes: ECooldownType[] = [ECooldownType.targetedDamageReduc];
+    CdTypes: ECooldownType[] = [
+        ECooldownType.targetedDamageReduc,
+        ECooldownType.personalWall,
+    ];
 
     HeartOfFear = HeartOfFear;
     MoguShanVault = MoguShanVault;
@@ -306,6 +309,14 @@ export class MrtNotesMakerComponent {
         const eventId = this.eventIdS();
         if (eventId) {
             localStorage.setItem(eventId, JSON.stringify(this.ALL_BOSSES));
+        }
+    }
+
+    clearCache() {
+        const eventId = this.eventIdS();
+        if (eventId) {
+            localStorage.removeItem(eventId);
+            window.location.reload();
         }
     }
 }

@@ -306,7 +306,7 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/ability_monk_fortifyingale_new.jpg',
         ),
-        types: [ECooldownType.targetedDamageReduc],
+        types: [ECooldownType.personalWall],
         priority: 2,
     },
     {
@@ -317,7 +317,7 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_iceboundfortitude.jpg',
         ),
-        types: [ECooldownType.targetedDamageReduc],
+        types: [ECooldownType.personalWall],
         priority: 2,
     },
     {

@@ -1013,23 +1013,44 @@ export const StoneGuards: Boss = {
             name: 'Explo 1',
             timer: '00:01:05',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 51052, count: 999 }, // AMZ
+                        { cdId: 76577, count: 999 }, // Smoke Bomb
+                        { cdId: 98008, count: 999 }, // SLT
+                        { cdId: 62618, count: 999 }, // Dome
+                    ],
+                },
+            ],
             noteTemplate: `{time:01:05}{spell:115817} Explo1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
-            name: '',
+            name: 'Painting',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `\n`,
+            noteTemplate: `\n |cffc69b6d Painting |r \n`,
         },
         {
             isChecked: true,
             name: '99%',
             timer: '00:01:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:15,e,HPS_stone_99}{spell:116304} 99% - [ATTRIBS] \n`,
         },
         {
@@ -1037,7 +1058,16 @@ export const StoneGuards: Boss = {
             name: '66%',
             timer: '00:02:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:17,e,HPS_stone_66}{spell:116304} 66% - [ATTRIBS] \n`,
         },
         {
@@ -1045,64 +1075,115 @@ export const StoneGuards: Boss = {
             name: '33%',
             timer: '00:03:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:17,e,HPS_stone_33}{spell:116304} 33% - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
-            name: '',
+            name: 'Rota CD Tank',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `\n`,
+            noteTemplate: `\n |cffc69b6d Rota CD Tank |r \n`,
         },
         {
             isChecked: true,
-            name: 'Start Rota CD Tank',
-            timer: '00:03:00',
+            name: 'CD 1',
+            timer: '00:01:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 33206, count: 1 }, // Pain Supp
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03} - [ATTRIBS] \n`, // Joueur
         },
         {
             isChecked: true,
             name: 'CD 2',
-            timer: '00:03:00',
+            timer: '00:01:14',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.targetedDamageReduc, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:14,SCC:33206:1} - [ATTRIBS] \n`, // Joueur
         },
         {
             isChecked: true,
             name: 'CD 3',
-            timer: '00:03:00',
+            timer: '00:01:28',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:14,SCC:33206:2} - [ATTRIBS] \n`, // Joueur
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.targetedDamageReduc, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:28,SCC:33206:1} - [ATTRIBS] \n`, // Joueur
         },
         {
             isChecked: true,
             name: 'CD 4',
-            timer: '00:03:00',
+            timer: '00:01:36',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:18,SCC:114030:1} - [ATTRIBS] \n`, // Joueur
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.targetedDamageReduc, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:36,SCC:33206:1} - [ATTRIBS] \n`, // Joueur
         },
         {
             isChecked: true,
             name: 'CD 5',
-            timer: '00:03:00',
+            timer: '00:01:50',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:18,SCC:114030:2} - [ATTRIBS] \n`, // Joueur
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.targetedDamageReduc, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:50,SCC:33206:1} - [ATTRIBS] \n`, // Joueur
         },
         {
             isChecked: true,
             name: 'CD 6',
-            timer: '00:03:00',
+            timer: '00:02:06',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:18,SCC:114030:3} - [ATTRIBS] \n`, // Joueur
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.targetedDamageReduc, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:64,SCC:33206:1} - [ATTRIBS] \n`, // Joueur
         },
     ],
 };
@@ -1123,34 +1204,45 @@ export const Feng: Boss = {
         {
             isChecked: true,
             name: 'AV 1',
-            timer: '00:00:00',
+            timer: '00:00:25',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 114049, count: 1 }, // Ascendance
+                        { cdId: 33891, count: 1 }, // TOL
+                        { cdId: 76577, count: 1 }, // Smoke Bomb
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SAA:116364:1}{spell:116365} AV1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'AV 2',
-            timer: '00:00:00',
+            timer: '00:00:50',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdId: 114049, count: 1 }, // Ascendance
+                        { cdId: 33891, count: 1 }, // TOL
+                        { cdId: 740, count: 1 }, // Tranqui
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SAA:116364:2}{spell:116365} AV2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'AV 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:116364:3}{spell:116365} AV3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'AV 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:116364:4}{spell:116365} AV4 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -1163,7 +1255,7 @@ export const Feng: Boss = {
         {
             isChecked: true,
             name: 'EP 1',
-            timer: '00:00:00',
+            timer: '00:04:00',
             attribs: [],
             exceptedCds: [],
             noteTemplate: `{time:00:03,SCS:116018:1}{spell:116018} EP1 - [ATTRIBS] \n`,
@@ -1171,26 +1263,33 @@ export const Feng: Boss = {
         {
             isChecked: true,
             name: 'EP 2',
-            timer: '00:00:00',
+            timer: '00:04:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 76577, count: 1 }, // Smoke Bomb
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 114049, count: 1 }, // Ascendance
+                        { cdId: 33891, count: 1 }, // TOL
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdId: 98008, count: 1 }, // SLT
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:116018:2}{spell:116040} EP2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'EP 3',
-            timer: '00:00:00',
+            timer: '00:05:00',
             attribs: [],
             exceptedCds: [],
             noteTemplate: `{time:00:03,SCS:116018:3}{spell:116040} EP3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'EP 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:116018:4}{spell:116040} EP4 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -1203,66 +1302,56 @@ export const Feng: Boss = {
         {
             isChecked: true,
             name: 'DF 1',
-            timer: '00:00:00',
+            timer: '00:06:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:15,SCC:116711:2}{spell:116711} DF1 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:15,SCC:116711:1}{spell:116711} DF1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'DF 1',
-            timer: '00:00:00',
+            timer: '00:06:05',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:35,SCC:116711:2}{spell:116711} DF1 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.reducMagic, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:35,SCC:116711:1}{spell:116711} DF1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'DF 2',
-            timer: '00:00:00',
+            timer: '00:06:10',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:15,SCC:116711:3}{spell:116711} DF2 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:15,SCC:116711:2}{spell:116711} DF2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'DF 2',
-            timer: '00:00:00',
+            timer: '00:06:15',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:35,SCC:116711:3}{spell:116711} DF2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'DF 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:15,SCC:116711:4}{spell:116711} DF3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'DF 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:35,SCC:116711:4}{spell:116711} DF3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'DF 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:15,SCC:116711:5}{spell:116711} DF4 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'DF 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:35,SCC:116711:5}{spell:116711} DF4 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.reducMagic, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:35,SCC:116711:2}{spell:116711} DF2 - [ATTRIBS] \n`,
         },
     ],
 };
@@ -1274,11 +1363,11 @@ export const Garalaj: Boss = {
     spells: [
         {
             isChecked: true,
-            name: 'Totem 2',
+            name: 'Totem 3',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:03,SCC:116174:2}{spell:116174} Totem2 - [ATTRIBS] \n`, // Nom joueur
+            noteTemplate: `{time:00:03,SCC:116174:3}{spell:116174} Totem3 - [ATTRIBS] \n`, // Nom joueur
         },
         {
             isChecked: true,
@@ -1287,22 +1376,6 @@ export const Garalaj: Boss = {
             attribs: [],
             exceptedCds: [],
             noteTemplate: `{time:00:03,SCC:116174:4}{spell:116174} Totem4 - [ATTRIBS] \n`, // Nom joueur
-        },
-        {
-            isChecked: true,
-            name: 'Totem 6',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCC:116174:6}{spell:116174} Totem6 - [ATTRIBS] \n`, // Nom joueur
-        },
-        {
-            isChecked: true,
-            name: 'Totem 8',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCC:116174:8}{spell:116174} Totem8 - [ATTRIBS] \n`, // Nom joueur
         },
         {
             isChecked: true,
@@ -1317,7 +1390,17 @@ export const Garalaj: Boss = {
             name: '20%',
             timer: '00:05:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdId: 114049, count: 1 }, // Ascendance
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:10,e,HPS_gara_20}{spell:117752} 20% -  [ATTRIBS] \n`,
         },
         {
@@ -1325,7 +1408,16 @@ export const Garalaj: Boss = {
             name: '15%',
             timer: '00:05:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 98008, count: 1 }, // SLT
+                        { cdId: 33891, count: 1 }, // TOL
+                        { cdType: ECooldownType.supportHealing, count: 2 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:10,e,HPS_gara_15}{spell:117752} 15% -  [ATTRIBS] \n`,
         },
         {
@@ -1333,7 +1425,19 @@ export const Garalaj: Boss = {
             name: '10%',
             timer: '00:06:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdId: 114049, count: 1 }, // Ascendance
+                        { cdId: 33891, count: 1 }, // TOL
+                        { cdType: ECooldownType.supportHealing, count: 2 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:10,e,HPS_gara_10}{spell:117752} 10% -  [ATTRIBS] \n`,
         },
         {
@@ -1341,7 +1445,19 @@ export const Garalaj: Boss = {
             name: '5%',
             timer: '00:06:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 98008, count: 999 }, // SLT
+                        { cdId: 76577, count: 999 }, // Smoke
+                        { cdId: 740, count: 999 }, // Tranqui
+                        { cdType: ECooldownType.supportHealing, count: 99 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:10,e,HPS_gara_5}{spell:117752} 5% -  [ATTRIBS] \n`,
         },
     ],
@@ -1363,58 +1479,44 @@ export const SpiritKings: Boss = {
         {
             isChecked: true,
             name: 'Shield 1',
-            timer: '00:00:00',
+            timer: '00:00:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 98008, count: 1 }, // SLT
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117961:1}{spell:117961} Shield1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Shield 2',
-            timer: '00:00:00',
+            timer: '00:01:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdId: 98008, count: 1 }, // SLT
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117961:2}{spell:117961} Shield2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Shield 3',
-            timer: '00:00:00',
+            timer: '00:01:30',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:117961:3}{spell:117961} Shield2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Subetaï',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `\n |cffc69b6d Subetaï |r \n`,
-        },
-        {
-            isChecked: true,
-            name: 'SoH 1',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:118162:1}{spell:118162} SoH1 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'SoH 2',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:118162:2}{spell:118162} SoH2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'SoH 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:118162:3}{spell:118162} SoH3 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:117961:3}{spell:117961} Shield3 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -1427,25 +1529,49 @@ export const SpiritKings: Boss = {
         {
             isChecked: true,
             name: 'SoD 1',
-            timer: '00:00:00',
+            timer: '00:02:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117697:1}{spell:117697} SoD1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'SoD 2',
-            timer: '00:00:00',
+            timer: '00:02:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117697:2}{spell:117697} SoD2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'SoD 3',
-            timer: '00:00:00',
+            timer: '00:03:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117697:3}{spell:117697} SoD3 - [ATTRIBS] \n`,
         },
         {
@@ -1459,25 +1585,71 @@ export const SpiritKings: Boss = {
         {
             isChecked: true,
             name: 'MS 1',
-            timer: '00:00:00',
+            timer: '00:04:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 98008, count: 1 }, // SLT
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+
             noteTemplate: `{time:00:03,SCS:117708:1}{spell:117708} MS1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'MS 2',
-            timer: '00:00:00',
+            timer: '00:04:30',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 98008, count: 1 }, // SLT
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117708:2}{spell:117708} MS2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'MS 3',
-            timer: '00:00:00',
+            timer: '00:05:00',
             attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 98008, count: 1 }, // SLT
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:03,SCS:117708:3}{spell:117708} MS3 - [ATTRIBS] \n`,
         },
         {
@@ -1491,49 +1663,55 @@ export const SpiritKings: Boss = {
         {
             isChecked: true,
             name: 'Cow 1',
-            timer: '00:00:00',
+            timer: '00:04:00',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:13,SAA:117756:1}{spell:117756} Cow1 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Cow 1',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:26,SAA:117756:1}{spell:117756} Cow1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Cow 2',
-            timer: '00:00:00',
+            timer: '00:04:30',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:13,SAA:117756:2}{spell:117756} Cow2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Cow 2',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:26,SAA:117756:2}{spell:117756} Cow2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Cow 3',
-            timer: '00:00:00',
+            timer: '00:05:00',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:13,SAA:117756:3}{spell:117756} Cow3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Cow 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.healing, count: 1 },
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                    ],
+                },
+            ],
             noteTemplate: `{time:00:26,SAA:117756:3}{spell:117756} Cow3 - [ATTRIBS] \n`,
         },
     ],
@@ -1547,141 +1725,179 @@ export const Elegon: Boss = {
         {
             isChecked: true,
             name: 'FS 1',
-            timer: '00:00:00',
+            timer: '00:00:10',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:117911:1}{spell:117911} FS1 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SAA:129711:1}{spell:129711} FS1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'FS 2',
-            timer: '00:00:00',
+            timer: '00:00:20',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:117911:2}{spell:117911} FS2 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SAA:129711:2}{spell:129711} FS2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'FS 3',
-            timer: '00:00:00',
+            timer: '00:00:30',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:117911:3}{spell:117911} FS3 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SAA:129711:3}{spell:129711} FS3 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'FS 4',
-            timer: '00:00:00',
+            timer: '00:00:40',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SAA:117911:4}{spell:117911} FS4 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 62618, count: 1 }, // Dome
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SAA:129711:4}{spell:129711} FS4 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
-            name: '',
+            name: 'Phase 2.1',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `\n`,
-        },
-        {
-            isChecked: true,
-            name: 'FS 1',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:129711:1}{spell:129711} FS1 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'FS 2',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:129711:2}{spell:129711} FS2 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'FS 3',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:129711:3}{spell:129711} FS3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'FS 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:03,SCS:129711:4}{spell:129711} FS4 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Phase 1.1',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `\n |cffc69b6d Phase 1.1 |r \n`,
-        },
-        {
-            isChecked: true,
-            name: 'Spark 4',
-            timer: '00:00:00',
-            attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:3}{spell:119360} Spark4 - [ATTRIBS] \n`,
+            noteTemplate: `\n |cffc69b6d Phase 2.1 |r \n`,
         },
         {
             isChecked: true,
             name: 'Spark 5',
-            timer: '00:00:00',
+            timer: '00:01:00',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:5}{spell:119360} Spark5 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:5}{spell:119360} Spark5 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Spark 6',
-            timer: '00:00:00',
+            timer: '00:01:10',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:6}{spell:119360} Spark6 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:6}{spell:119360} Spark6 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
-            name: 'Phase 1.2',
-            timer: '00:00:00',
+            name: 'Spark 7',
+            timer: '00:01:20',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `|cffc69b6d Phase 1.2 |r \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:7}{spell:119360} Spark7 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
-            name: 'Spark 4',
+            name: 'Phase 2.2',
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:9}{spell:119360} Spark4 - [ATTRIBS] \n`,
+            noteTemplate: `|cffc69b6d Phase 2.2 |r \n`,
         },
         {
             isChecked: true,
             name: 'Spark 5',
-            timer: '00:00:00',
+            timer: '00:01:30',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:10}{spell:119360} Spark5 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:13}{spell:119360} Spark4 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
             name: 'Spark 6',
-            timer: '00:00:00',
+            timer: '00:01:40',
             attribs: [],
-            exceptedCds: [],
-            noteTemplate: `{time:00:09,SCC:119358:11}{spell:119360} Spark6 - [ATTRIBS] \n`,
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:14}{spell:119360} Spark5 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
+            name: 'Spark 7',
+            timer: '00:01:50',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:07,SCC:119358:15}{spell:119360} Spark6 - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: false,
             name: '',
             timer: '00:00:00',
             attribs: [],
@@ -1689,7 +1905,7 @@ export const Elegon: Boss = {
             noteTemplate: `\n |cffc69b6d Phase 3 |r \n`,
         },
         {
-            isChecked: true,
+            isChecked: false,
             name: '15s',
             timer: '00:00:00',
             attribs: [],
@@ -1697,7 +1913,7 @@ export const Elegon: Boss = {
             noteTemplate: `{time:00:15,SAA:116994:1}{spell:116994} - [ATTRIBS] \n`,
         },
         {
-            isChecked: true,
+            isChecked: false,
             name: '27s',
             timer: '00:00:00',
             attribs: [],
@@ -1705,7 +1921,7 @@ export const Elegon: Boss = {
             noteTemplate: `{time:00:27,SAA:116994:1}{spell:116994} - [ATTRIBS] \n`,
         },
         {
-            isChecked: true,
+            isChecked: false,
             name: '39s',
             timer: '00:00:00',
             attribs: [],
@@ -1713,7 +1929,7 @@ export const Elegon: Boss = {
             noteTemplate: `{time:00:39,SAA:116994:1}{spell:116994} - [ATTRIBS] \n`,
         },
         {
-            isChecked: true,
+            isChecked: false,
             name: '51s',
             timer: '00:00:00',
             attribs: [],
@@ -1721,7 +1937,7 @@ export const Elegon: Boss = {
             noteTemplate: `{time:00:51,SAA:116994:1}{spell:116994} - [ATTRIBS] \n`,
         },
         {
-            isChecked: true,
+            isChecked: false,
             name: '1mn03s',
             timer: '00:00:00',
             attribs: [],
