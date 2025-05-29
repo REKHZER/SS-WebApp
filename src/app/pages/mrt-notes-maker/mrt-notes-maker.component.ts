@@ -202,7 +202,17 @@ export class MrtNotesMakerComponent {
 
         const localSave = localStorage.getItem(eventId);
         if (localSave) {
-            this.ALL_BOSSES = JSON.parse(localSave);
+            const saved: Boss[] = JSON.parse(localSave);
+            for (let index = 0; index < this.ALL_BOSSES.length; index++) {
+                for (
+                    let index2 = 0;
+                    index2 < this.ALL_BOSSES[index].spells.length;
+                    index2++
+                ) {
+                    this.ALL_BOSSES[index].spells[index2].attribs =
+                        saved[index].spells[index2].attribs;
+                }
+            }
         }
         this.selectedBoss = this.ALL_BOSSES[0];
 
