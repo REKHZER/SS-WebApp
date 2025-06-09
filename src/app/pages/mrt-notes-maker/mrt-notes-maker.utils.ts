@@ -43,9 +43,15 @@ export const bossNoteToMRTNote = (boss: Boss): string => {
 export const raidDropToRoster = (
     raidDrop: RaidHelperRaidDrop[],
 ): MRTPlayer[] => {
+    console.log('\n\n ~ raidDrop:', raidDrop);
     return raidDrop.reduce<MRTPlayer[]>((acc, curr) => {
+        console.log('\n\n ~ curr:', curr);
+        console.log('\n\n ~ acc:', acc);
+
         const classFromSpec = getClassFromSpecId(curr.class + curr.spec);
+        console.log('\n\n ~ classFromSpec:', classFromSpec);
         const spec = getSpecFromId(curr.class + curr.spec);
+        console.log('\n\n ~ spec:', spec);
         return [
             ...acc,
             {
@@ -58,9 +64,15 @@ export const raidDropToRoster = (
 };
 
 const getClassFromSpecId = (classSpec: string): EPlayerClass => {
+    console.log('\n\n ~ getClassFromSpecId ~ classSpec:', classSpec);
+    console.log(
+        '\n\n ~ getClassFromSpecId ~ ALL_CLASSES_WITH_SPECS:',
+        ALL_CLASSES_WITH_SPECS,
+    );
     const playerClass = ALL_CLASSES_WITH_SPECS.find(x =>
         x.specs.some(y => y.spec === classSpec),
     )?.class;
+    console.log('\n\n ~ getClassFromSpecId ~ playerClass:', playerClass);
     if (!playerClass) {
         throw new Error('SPEC ID ERROR FOR CLASS');
     }

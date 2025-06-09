@@ -39,6 +39,11 @@ export class MrtNotesMakerStore extends ComponentStore<MrtNotesMakerStoreState> 
                             const players = raidPlan
                                 ? raidDropToRoster(raidPlan?.raidDrops)
                                 : [];
+                            console.log(
+                                '\n\n ~ MrtNotesMakerStore ~ players:',
+                                players,
+                            );
+
                             this.setState(state => ({
                                 ...state,
                                 raidPlan,

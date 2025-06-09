@@ -101,7 +101,7 @@ export class MrtNotesMakerComponent {
     allCdsS = toSignal(this.mrtNotesMakerStore.allCds$);
     selectedBoss!: Boss;
 
-    eventIdS = signal<string | null>('1363850553901187162');
+    eventIdS = signal<string | null>('1379227092830654575');
 
     displayedColumns: string[] = [
         'checkbox',
