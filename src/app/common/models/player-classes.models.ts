@@ -41,7 +41,7 @@ export enum EPlayerSpec {
     WarArms = 'WarriorArms',
     WarFury = 'WarriorFury',
     WarProtection = 'WarriorProtection',
-    PaladinHoly = 'PaladinHoly',
+    PaladinHoly = 'PaladinHoly1',
     PaladinProtection = 'PaladinProtection',
     PaladinRetribution = 'PaladinRetribution',
     MageArcane = 'MageArcane',
