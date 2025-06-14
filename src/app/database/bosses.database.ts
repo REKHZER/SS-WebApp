@@ -633,6 +633,180 @@ export const Meljarak: Boss = {
             exceptedCds: [],
             noteTemplate: `{time:00:16,SCC:62618:1} {spell:62618} - [ATTRIBS] \n`, // Joueur
         },
+        {
+            isChecked: true,
+            name: 'Blades',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `Blades \n`, // Joueur
+        },
+        {
+            isChecked: true,
+            name: '9',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:16,SCC:62618:1} {spell:62618} - [ATTRIBS] \n`, // Joueur
+        },
+        {
+            isChecked: true,
+            name: 'Baldes',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `\n Blades \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 1',
+            timer: '00:00:45',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:1}{spell:122406} Blade 1 -  [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 2',
+            timer: '00:01:30',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:2}{spell:122406} Blade 2 -  [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 3',
+            timer: '00:02:15',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:3}{spell:122406} Blade 3 -  [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 4',
+            timer: '00:03:00',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:4}{spell:122406} Blade 4 -  [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 5',
+            timer: '00:03:45',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:5}{spell:122406} Blade 5 -  [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Blade 6',
+            timer: '00:05:30',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.healing, count: 1 },
+                    ],
+                },
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { cdId: 97462, count: 1 }, // War Cry
+                        { cdId: 114203, count: 1 }, // Demo banner
+                        { cdType: ECooldownType.supportHealing, count: 1 },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:03,SCS:122407:6}{spell:122406} Blade 6 -  [ATTRIBS] \n`,
+        },
     ],
 };
 
@@ -807,7 +981,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:1}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:1}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -815,7 +989,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:2}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:2}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -823,7 +997,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:3}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:3}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -831,7 +1005,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:4}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:4}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -839,7 +1013,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:5}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:5}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -847,7 +1021,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:6}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:6}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -855,7 +1029,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:7}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:7}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -863,7 +1037,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:8}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:8}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -871,7 +1045,7 @@ export const Shekzeer: Boss = {
             timer: '00:00:00',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:04,SCC:124862:9}{spell:124862} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:04,SCC:124862:9}{spell:124862} - {spell:8143} [ATTRIBS] \n`,
         },
         {
             isChecked: true,
