@@ -80,6 +80,17 @@ export const ALL_CDS: Cooldown[] = [
         iconUrl: new URL(
             'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auramastery.jpg',
         ),
+        types: [ECooldownType.reducMagic, ECooldownType.reducPhysic],
+        priority: 2,
+    },
+    {
+        name: 'Aura Mastery',
+        specs: [EPlayerSpec.PaladinRetribution],
+        cooldown: '00:02:00',
+        spellId: 31821,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auramastery.jpg',
+        ),
         types: [ECooldownType.reducMagic],
         priority: 1,
     },
