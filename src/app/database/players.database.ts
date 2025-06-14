@@ -61,11 +61,11 @@ export const PLAYERS: Player[] = [
         name: 'Akisame',
         arrivalDate: '04-05-2025',
     },
-    {
-        discordId: '556883423411699723',
-        name: 'Alfredz',
-        arrivalDate: '04-05-2025',
-    },
+    // {
+    //     discordId: '556883423411699723',
+    //     name: 'Alfredz',
+    //     arrivalDate: '04-05-2025',
+    // },
     {
         discordId: '1307652004239249418',
         name: 'Alphashot',
@@ -76,11 +76,11 @@ export const PLAYERS: Player[] = [
         name: 'Badflat',
         arrivalDate: '04-05-2025',
     },
-    {
-        discordId: '215907977293594625',
-        name: 'Belphou',
-        arrivalDate: '04-05-2025',
-    },
+    // {
+    //     discordId: '215907977293594625',
+    //     name: 'Belphou',
+    //     arrivalDate: '04-05-2025',
+    // },
     {
         discordId: '152916083244924929',
         name: 'Bison',
