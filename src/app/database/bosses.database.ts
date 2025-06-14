@@ -46,44 +46,6 @@ export const Zorlok: Boss = {
         },
         {
             isChecked: true,
-            name: 'F&V 3',
-            timer: '00:00:03',
-            attribs: [],
-            exceptedCds: [
-                {
-                    priority: 1,
-                    expectedCooldowns: [
-                        { cdType: ECooldownType.reducPhysic, count: 1 },
-                        { cdType: ECooldownType.healing, count: 1 },
-                        { cdType: ECooldownType.increasePoolHp, count: 1 },
-                        { cdId: 114203, count: 1 }, // Banner war
-                        { cdType: ECooldownType.supportHealing, count: 1 },
-                    ],
-                },
-            ],
-            noteTemplate: `{time:00:03,SCS:122713:3}{spell:122713} F&V 3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'F&V 4',
-            timer: '00:00:04',
-            attribs: [],
-            exceptedCds: [
-                {
-                    priority: 1,
-                    expectedCooldowns: [
-                        { cdType: ECooldownType.reducPhysic, count: 1 },
-                        { cdType: ECooldownType.healing, count: 1 },
-                        { cdType: ECooldownType.increasePoolHp, count: 1 },
-                        { cdId: 114203, count: 1 }, // Banner war
-                        { cdType: ECooldownType.supportHealing, count: 1 },
-                    ],
-                },
-            ],
-            noteTemplate: `{time:00:03,SCS:122713:4}{spell:122713} F&V 4 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
             name: 'Phase 2',
             timer: '00:05:00',
             attribs: [],
@@ -117,7 +79,7 @@ export const Zorlok: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:42,SCC:123833:1}{spell:122713} F&V 1 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122713:3}{spell:122713} F&V 1 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -147,7 +109,7 @@ export const Zorlok: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:01:31,SCC:123833:1}{spell:122713} F&V 2 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122713:4}{spell:122713} F&V 2 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -166,7 +128,7 @@ export const Zorlok: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:02:18,SCC:123833:1}{spell:122713} F&V 3 - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122713:5}{spell:122713} F&V 3 - [ATTRIBS] \n`,
         },
     ],
 };
