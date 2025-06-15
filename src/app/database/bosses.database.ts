@@ -680,7 +680,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:1}{spell:122406} Blade 1 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:1}{spell:122406} Blade 1 -  [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -705,7 +705,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:2}{spell:122406} Blade 2 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:2}{spell:122406} Blade 2 -  [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -730,7 +730,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:3}{spell:122406} Blade 3 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:3}{spell:122406} Blade 3 -  [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -755,7 +755,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:4}{spell:122406} Blade 4 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:4}{spell:122406} Blade 4 -  [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -780,7 +780,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:5}{spell:122406} Blade 5 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:5}{spell:122406} Blade 5 -  [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -805,7 +805,7 @@ export const Meljarak: Boss = {
                     ],
                 },
             ],
-            noteTemplate: `{time:00:03,SCS:122407:6}{spell:122406} Blade 6 -  [ATTRIBS] \n`,
+            noteTemplate: `{time:00:03,SCS:122406:6}{spell:122406} Blade 6 -  [ATTRIBS] \n`,
         },
     ],
 };
