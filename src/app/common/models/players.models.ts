@@ -5,6 +5,7 @@ export interface Player {
     discordId: string;
     name: string;
     arrivalDate: ISODate;
+    isFiller?: boolean;
 }
 
 export interface MRTPlayer {

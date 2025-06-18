@@ -8,6 +8,7 @@ export interface AttendanceInfo {
     presencePercentage: number;
     ghostingPercentage: number;
     eventCount: number;
+    isFiller?: boolean;
 }
 
 export interface AttendanceData {
@@ -19,4 +20,5 @@ export interface AttendanceData {
     absenceCount: number;
     presenceCount: number;
     totalEventCount: number;
+    isFiller?: boolean;
 }

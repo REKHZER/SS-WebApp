@@ -5,13 +5,14 @@ import { MatSortModule, Sort } from '@angular/material/sort';
 import { AttendanceInfo } from '../../common/models/attendance.models';
 import { AttendanceStore } from './attendance.store';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
     selector: 'app-attendance-analysis',
     templateUrl: 'attendance-analysis.component.html',
     styleUrls: ['attendance-analysis.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, CdkTableModule, MatSortModule],
+    imports: [CommonModule, CdkTableModule, MatSortModule, MatChipsModule],
     providers: [AttendanceStore],
 })
 export class AttendanceAnalysisComponent {

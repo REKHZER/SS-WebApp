@@ -12,7 +12,10 @@
         <!-- Name -->
         <ng-container cdkColumnDef="userName">
             <th cdk-header-cell *cdkHeaderCellDef mat-sort-header>Name</th>
-            <td cdk-cell *cdkCellDef="let element">{{ element.userName }}</td>
+            <td cdk-cell *cdkCellDef="let element">
+                {{ element.userName }}
+                <mat-chip *ngIf="element.isFiller">Filler</mat-chip>
+            </td>
         </ng-container>
 
         <!-- Events -->

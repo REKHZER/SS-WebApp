@@ -26,6 +26,7 @@ export class AttendanceService {
         PLAYERS.forEach(player => {
             attendanceDTOMap.set(player.discordId, {
                 userId: player.discordId,
+                isFiller: player.isFiller,
                 absenceCount: 0,
                 benchCount: 0,
                 totalEventCount: 0,
@@ -128,6 +129,7 @@ export class AttendanceService {
                 presencePercentage,
                 userId: attendanceDTO.userId,
                 userName: attendanceDTO.userName,
+                isFiller: attendanceDTO.isFiller,
             });
         });
 

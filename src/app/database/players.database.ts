@@ -52,11 +52,6 @@ export const PLAYERS: Player[] = [
         arrivalDate: '04-05-2025',
     },
     {
-        discordId: '334775963923644418',
-        name: 'Natelune',
-        arrivalDate: '04-05-2025',
-    },
-    {
         discordId: '323774776802017281',
         name: 'Akisame',
         arrivalDate: '04-05-2025',
@@ -173,13 +168,154 @@ export const PLAYERS: Player[] = [
         arrivalDate: '05-10-2025',
     },
     {
-        discordId: '494247195814658050',
-        name: 'Philas',
-        arrivalDate: '05-10-2025',
-    },
-    {
         discordId: '949955793359368212',
         name: 'Saraka',
         arrivalDate: '05-10-2025',
+    },
+    {
+        discordId: '286712116449247232',
+        name: 'Scrow',
+        arrivalDate: '06-04-2025',
+    },
+
+    // Fillers
+    {
+        discordId: '494247195814658050',
+        name: 'Philas',
+        arrivalDate: '05-10-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '141960873139896320',
+        name: 'Lapi',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '273894889387982849',
+        name: 'Hepi',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '272813108547026944',
+        name: 'Nehavy',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '213363848504147969',
+        name: 'Spleen',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '693477778158387270',
+        name: 'Paxy',
+        arrivalDate: '06-20-2025',
+    },
+    {
+        discordId: '231534208022085635',
+        name: 'Kalou',
+        arrivalDate: '06-20-2025',
+    },
+    {
+        discordId: '299556914751078413',
+        name: 'Droopy',
+        arrivalDate: '06-20-2025',
+    },
+    {
+        discordId: '307223363774840833',
+        name: 'Nostie',
+        arrivalDate: '06-20-2025',
+    },
+    {
+        discordId: '331867790510391308',
+        name: 'Lefeudark',
+        arrivalDate: '06-20-2025',
+    },
+    {
+        discordId: '209283529647849472',
+        name: 'Bck',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '281856461519454210',
+        name: 'Kallig',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '581818106801029122',
+        name: 'Wolkse',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '539931536401891338',
+        name: 'Aerza',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '190498509198196736',
+        name: 'Oshiro',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '527293694806589452',
+        name: 'Steliox',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '239108046280851466',
+        name: 'Viktor',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '265461732900732930',
+        name: 'Spoz',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '229913313130184705',
+        name: 'Kunada',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '337321151879577601',
+        name: 'Tael',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '212278842864304128',
+        name: 'Maxotti',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '569313412417323010',
+        name: 'Maelly',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '235812195131195393',
+        name: 'Tedio',
+        arrivalDate: '06-20-2025',
+        isFiller: true,
+    },
+    {
+        discordId: '334775963923644418',
+        name: 'Natelune',
+        arrivalDate: '04-05-2025',
+        isFiller: true,
     },
 ];
