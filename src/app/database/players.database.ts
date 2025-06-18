@@ -213,26 +213,31 @@ export const PLAYERS: Player[] = [
         discordId: '693477778158387270',
         name: 'Paxy',
         arrivalDate: '06-20-2025',
+        isFiller: true,
     },
     {
         discordId: '231534208022085635',
         name: 'Kalou',
         arrivalDate: '06-20-2025',
+        isFiller: true,
     },
     {
         discordId: '299556914751078413',
         name: 'Droopy',
         arrivalDate: '06-20-2025',
+        isFiller: true,
     },
     {
         discordId: '307223363774840833',
         name: 'Nostie',
         arrivalDate: '06-20-2025',
+        isFiller: true,
     },
     {
         discordId: '331867790510391308',
         name: 'Lefeudark',
         arrivalDate: '06-20-2025',
+        isFiller: true,
     },
     {
         discordId: '209283529647849472',
