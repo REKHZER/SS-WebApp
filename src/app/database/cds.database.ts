@@ -342,6 +342,21 @@ export const ALL_CDS: Cooldown[] = [
         types: [ECooldownType.personalHealingBuff],
         priority: 1,
     },
+    {
+        name: 'Tremor Totem',
+        specs: [
+            EPlayerSpec.ShamanRestoration,
+            EPlayerSpec.ShamanElemental,
+            EPlayerSpec.ShamanEnhancement,
+        ],
+        cooldown: '00:01:00',
+        spellId: 8143,
+        iconUrl: new URL(
+            'https://wow.zamimg.com/images/wow/icons/large/spell_nature_tremortotem.jpg',
+        ),
+        types: [ECooldownType.antiFear],
+        priority: 1,
+    },
 ];
 
 // increasePoolHp = 'increasePoolHp', // Cri war, Vampiric Blood, Frenzy Regen

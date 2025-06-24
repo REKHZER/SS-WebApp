@@ -33,4 +33,5 @@ export enum ECooldownType {
     supportHealing = 'supportHealing', // AG off spec, HTT off spec
     speedBoost = 'speedBoost', // Roar
     personalWall = 'personalWall', // Wall tanks
+    antiFear = 'antiFear', // Tremor
 }

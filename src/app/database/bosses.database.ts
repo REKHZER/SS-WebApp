@@ -213,7 +213,7 @@ export const Tayak: Boss = {
         {
             isChecked: true,
             name: 'US 3',
-            timer: '00:02:33',
+            timer: '00:02:36',
             attribs: [],
             exceptedCds: [
                 {
@@ -230,7 +230,7 @@ export const Tayak: Boss = {
         {
             isChecked: true,
             name: 'BS 3',
-            timer: '00:03:00',
+            timer: '00:03:05',
             attribs: [],
             exceptedCds: [
                 {
@@ -241,55 +241,6 @@ export const Tayak: Boss = {
                 },
             ],
             noteTemplate: `{time:03:00}{spell:358501} BS3 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'US 4',
-            timer: '00:03:34',
-            attribs: [],
-            exceptedCds: [
-                {
-                    priority: 1,
-                    expectedCooldowns: [
-                        { cdType: ECooldownType.reducPhysic, count: 1 },
-                        { cdType: ECooldownType.increasePoolHp, count: 1 },
-                        { cdId: 114203, count: 1 }, // Banner war
-                    ],
-                },
-            ],
-            noteTemplate: `{time:3:34}{spell:122994} US4 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'BS 4',
-            timer: '00:04:00',
-            attribs: [],
-            exceptedCds: [
-                {
-                    priority: 1,
-                    expectedCooldowns: [
-                        { cdType: ECooldownType.speedBoost, count: 1 },
-                    ],
-                },
-            ],
-            noteTemplate: `{time:04:00}{spell:358501} BS4 - [ATTRIBS] \n`,
-        },
-        {
-            isChecked: true,
-            name: 'US 5',
-            timer: '00:04:35',
-            attribs: [],
-            exceptedCds: [
-                {
-                    priority: 1,
-                    expectedCooldowns: [
-                        { cdType: ECooldownType.reducPhysic, count: 1 },
-                        { cdType: ECooldownType.increasePoolHp, count: 1 },
-                        { cdId: 114203, count: 1 }, // Banner war
-                    ],
-                },
-            ],
-            noteTemplate: `{time:4:35}{spell:122994} US5 - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -809,7 +760,6 @@ export const Meljarak: Boss = {
         },
     ],
 };
-
 export const Unsok: Boss = {
     id: 'unsok',
     name: "Un'Sok",
