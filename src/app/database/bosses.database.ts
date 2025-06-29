@@ -851,7 +851,7 @@ export const Unsok: Boss = {
             timer: '00:00:10',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:10,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:15,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -859,7 +859,7 @@ export const Unsok: Boss = {
             timer: '00:00:20',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:20,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:25,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -867,7 +867,7 @@ export const Unsok: Boss = {
             timer: '00:00:30',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:30,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:35,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
         },
         {
             isChecked: true,
@@ -875,7 +875,7 @@ export const Unsok: Boss = {
             timer: '00:00:40',
             attribs: [],
             exceptedCds: [],
-            noteTemplate: `{time:00:40,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
+            noteTemplate: `{time:00:45,SAA:122556:1}{spell:122556} - [ATTRIBS] \n`,
         },
     ],
 };
@@ -1060,6 +1060,78 @@ export const Shekzeer: Boss = {
             attribs: [],
             exceptedCds: [],
             noteTemplate: `{time:00:04,SCC:124845:7}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 8',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:8}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 9',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:9}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 10',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:10}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 11',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:11}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 12',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:12}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 13',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:13}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 14',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:14}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 15',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:15}{spell:124845} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: 'Calamity 16',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [],
+            noteTemplate: `{time:00:04,SCC:124845:16}{spell:124845} - [ATTRIBS] \n`,
         },
     ],
 };
@@ -2265,7 +2337,312 @@ export const LeiShi: Boss = {
     ],
 };
 
-export const Terasse: Boss[] = [Protectors, Tsulong, LeiShi];
+export const Sha: Boss = {
+    id: 'sha',
+    name: 'Sha',
+    img: 'sha.png',
+    spells: [
+        {
+            isChecked: true,
+            name: '1',
+            timer: '00:00:00',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:1}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '2',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:6}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '3',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:12062911}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '4',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:16}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '5',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:21}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '6',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:26}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '7',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:31}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '8',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:36}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '9',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:41}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '10',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:46}{spell:120629} - [ATTRIBS] \n`,
+        },
+        {
+            isChecked: true,
+            name: '11',
+            timer: '00:00:0',
+            attribs: [],
+            exceptedCds: [
+                {
+                    priority: 1,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.healing },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.personalHealingBuff },
+                    ],
+                },
+                {
+                    priority: 2,
+                    expectedCooldowns: [
+                        { count: 1, cdType: ECooldownType.supportHealing },
+                    ],
+                },
+            ],
+            noteTemplate: `{time:00:04,SAA:120629:51}{spell:120629} - [ATTRIBS] \n`,
+        },
+    ],
+};
+
+export const Terasse: Boss[] = [Protectors, Tsulong, LeiShi, Sha];
 
 export const ALL_BOSSES: Boss[] = [
     StoneGuards,
@@ -2282,4 +2659,5 @@ export const ALL_BOSSES: Boss[] = [
     Protectors,
     Tsulong,
     LeiShi,
+    Sha,
 ];
