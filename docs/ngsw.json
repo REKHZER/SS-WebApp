@@ -1,0 +1,95 @@
+{
+  "configVersion": 1,
+  "timestamp": 1751215567961,
+  "index": "/SS-WebApp/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SS-WebApp/favicon.ico",
+        "/SS-WebApp/index.html",
+        "/SS-WebApp/main-RU3QXWTS.js",
+        "/SS-WebApp/manifest.webmanifest",
+        "/SS-WebApp/polyfills-EQXJKH7W.js",
+        "/SS-WebApp/styles-NWITZWFM.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SS-WebApp/icons/icon-128x128.png",
+        "/SS-WebApp/icons/icon-144x144.png",
+        "/SS-WebApp/icons/icon-152x152.png",
+        "/SS-WebApp/icons/icon-192x192.png",
+        "/SS-WebApp/icons/icon-384x384.png",
+        "/SS-WebApp/icons/icon-512x512.png",
+        "/SS-WebApp/icons/icon-72x72.png",
+        "/SS-WebApp/icons/icon-96x96.png",
+        "/SS-WebApp/images/elegon.png",
+        "/SS-WebApp/images/feng.png",
+        "/SS-WebApp/images/garalaj.png",
+        "/SS-WebApp/images/mop.png",
+        "/SS-WebApp/images/spirit-kings.png",
+        "/SS-WebApp/images/ss-logo.png",
+        "/SS-WebApp/images/stone-guard.png",
+        "/SS-WebApp/images/will-of-the-emperor.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/SS-WebApp/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/SS-WebApp/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/SS-WebApp/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/SS-WebApp/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/SS-WebApp/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/SS-WebApp/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/SS-WebApp/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/SS-WebApp/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/SS-WebApp/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/SS-WebApp/images/elegon.png": "59f95b39269f0250ff1c9c6eb975b57695422a09",
+    "/SS-WebApp/images/feng.png": "27a623f76dbb5e25554fa7cc3142629ee2ac9486",
+    "/SS-WebApp/images/garalaj.png": "f7b9e04566e63a68f42ccc23a917a6065c0d576c",
+    "/SS-WebApp/images/mop.png": "0dc9cf0a94bfb52611dc1da00ffdfdb31576cf5c",
+    "/SS-WebApp/images/spirit-kings.png": "4e19de3257c8ed83ecc31ad2567097edbb004cfa",
+    "/SS-WebApp/images/ss-logo.png": "9565963dcf86dcd5b69648743c8e5694f5df45fd",
+    "/SS-WebApp/images/stone-guard.png": "bb221f8e4102bb6af505761651538731e4283b0f",
+    "/SS-WebApp/images/will-of-the-emperor.png": "e783ee10da1ebbb342f929427021b754324a73dc",
+    "/SS-WebApp/index.html": "b439ac3d81e2ad78fbf5a66cfdc289811b745bf7",
+    "/SS-WebApp/main-RU3QXWTS.js": "c5b778030e477762418e39162094da689d7df88a",
+    "/SS-WebApp/manifest.webmanifest": "312c251d003939df29c1d32a2891c002dcf1db71",
+    "/SS-WebApp/polyfills-EQXJKH7W.js": "d8301403135d2a2a157cb2e2394c22f3fc0b5801",
+    "/SS-WebApp/styles-NWITZWFM.css": "c06b936a30902042e222c3e932c11e2cd3e17368"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
