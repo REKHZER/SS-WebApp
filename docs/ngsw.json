@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1755327422816,
+  "timestamp": 1755447834539,
   "index": "/SS-WebApp/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/SS-WebApp/favicon.ico",
         "/SS-WebApp/index.html",
-        "/SS-WebApp/main-Z2E7ZJTA.js",
+        "/SS-WebApp/main-AEWKEPBL.js",
         "/SS-WebApp/manifest.webmanifest",
         "/SS-WebApp/polyfills-EQXJKH7W.js",
         "/SS-WebApp/styles-NWITZWFM.css"
@@ -67,8 +67,8 @@
     "/SS-WebApp/images/ss-logo.png": "9565963dcf86dcd5b69648743c8e5694f5df45fd",
     "/SS-WebApp/images/stone-guard.png": "bb221f8e4102bb6af505761651538731e4283b0f",
     "/SS-WebApp/images/will-of-the-emperor.png": "e783ee10da1ebbb342f929427021b754324a73dc",
-    "/SS-WebApp/index.html": "960894161c9c04e16659151f72647685bbde5094",
-    "/SS-WebApp/main-Z2E7ZJTA.js": "df57edcd8d44374d90f8e9ba06f1774e63647ea4",
+    "/SS-WebApp/index.html": "038d0ef766b572bd73ebb5d2a27191e0caf9cf1d",
+    "/SS-WebApp/main-AEWKEPBL.js": "ae3424279f2443db763b32a0b5356017784893fd",
     "/SS-WebApp/manifest.webmanifest": "312c251d003939df29c1d32a2891c002dcf1db71",
     "/SS-WebApp/polyfills-EQXJKH7W.js": "d8301403135d2a2a157cb2e2394c22f3fc0b5801",
     "/SS-WebApp/styles-NWITZWFM.css": "c06b936a30902042e222c3e932c11e2cd3e17368"
